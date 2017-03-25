@@ -48,6 +48,11 @@ void Ustaw_zegar(Timer tim, unsigned int prescaler, unsigned int period, int zas
 
 		TIM_Cmd(TIM, ENABLE);
 	}
+
+	if(zasilanie == 0){
+
+		TIM_Cmd(TIM, DISABLE);
+	}
 }
 
 void Aktywacja_przerwania_dla_timera(Timer tim){
@@ -86,4 +91,6 @@ void Konfiguracja_zegara_do_DEBOUNCERA_przerwan_zewnetrznych(){
 	int period = 199;
 
 	Ustaw_zegar(Tim3, prescaler, period, 0);
+	Ustaw_przerwanie_zewnetrzne(TIM3_IRQn);
+	Aktywacja_przerwania_dla_timera(Tim3);
 }

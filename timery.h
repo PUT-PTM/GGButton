@@ -5,6 +5,7 @@
 #include "stm32f4xx_exti.h"
 #include "stm32f4xx_syscfg.h"
 #include "misc.h"
+#include "przerwania_zewnetrzne.h"
 
 #ifndef timer
 #define timer
