@@ -11,7 +11,8 @@
 
 typedef enum Timer {Tim1, Tim2, Tim3, Tim4, Tim5} Timer;
 
-void Ustaw_zegar(Timer tim, unsigned int prescaler, unsigned int period);
-void aktywacja_przerwania_dla_timera(Timer tim);
+void Ustaw_zegar_ON(Timer tim, unsigned int prescaler, unsigned int period, int zasilanie);
+void Aktywacja_przerwania_dla_timera(Timer tim);
+void Konfiguracja_zegara_do_DEBOUNCERA_przerwan_zewnetrznych();
 
 #endif

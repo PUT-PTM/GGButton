@@ -1,6 +1,8 @@
 #include "timery.h"
 
-void Ustaw_zegar(Timer tim, unsigned int prescaler, unsigned int period){
+void Ustaw_zegar(Timer tim, unsigned int prescaler, unsigned int period, int zasilanie){
+
+	// zasilanie: 1 - ON | 0 - OFF
 
 	TIM_TypeDef* TIM;
 	unsigned int RCC_TIM;
@@ -42,10 +44,13 @@ void Ustaw_zegar(Timer tim, unsigned int prescaler, unsigned int period){
 
 	TIM_TimeBaseInit(TIM, &zegar);
 
-	TIM_Cmd(TIM, ENABLE);
+	if(zasilanie == 1){
+
+		TIM_Cmd(TIM, ENABLE);
+	}
 }
 
-void aktywacja_przerwania_dla_timera(Timer tim){
+void Aktywacja_przerwania_dla_timera(Timer tim){
 
 	switch(tim){
 
@@ -73,4 +78,12 @@ void aktywacja_przerwania_dla_timera(Timer tim){
 			TIM_ITConfig(TIM5, TIM_IT_Update, ENABLE);
 			break;
 	}
+}
+
+void Konfiguracja_zegara_do_DEBOUNCERA_przerwan_zewnetrznych(){
+
+	int prescaler = 8399;
+	int period = 199;
+
+	Ustaw_zegar(Tim3, prescaler, period, 0);
 }
