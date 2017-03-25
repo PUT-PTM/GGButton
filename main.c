@@ -94,7 +94,7 @@ void EXTI4_IRQHandler(void){
 
 void EXTI9_5_IRQHandler(void){
 
-	if (EXTI_GetITStatus(EXTI_Line5 | EXTI_Line6 | EXTI_Line7) != RESET){
+	if (EXTI_GetITStatus(EXTI_Line5 | EXTI_Line6 | EXTI_Line7 | EXTI_Line8) != RESET){
 
 		TIM_Cmd(TIM3, ENABLE);
 		EXTI_ClearITPendingBit(EXTI_Line5);
@@ -167,6 +167,14 @@ void TIM3_IRQHandler(void){
 		}
 
 		if(GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_7)){
+
+			GPIO_ToggleBits(GPIOD,GPIO_Pin_12);
+
+			TIM_Cmd(TIM3, DISABLE);
+			TIM3->CNT = 0;
+		}
+
+		if(GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_8)){
 
 			GPIO_ToggleBits(GPIOD,GPIO_Pin_12);
 

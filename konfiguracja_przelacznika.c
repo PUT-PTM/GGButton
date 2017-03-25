@@ -22,7 +22,7 @@ void Przelacznik_konfiguracja_wejscia_GPIOE(){
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOE, ENABLE);
 
 	GPIO_InitTypeDef port_E;
-	port_E.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1| GPIO_Pin_2| GPIO_Pin_3 | GPIO_Pin_4 | GPIO_Pin_5 | GPIO_Pin_6 | GPIO_Pin_7;
+	port_E.GPIO_Pin = GPIO_Pin_0 | GPIO_Pin_1| GPIO_Pin_2| GPIO_Pin_3 | GPIO_Pin_4 | GPIO_Pin_5 | GPIO_Pin_6 | GPIO_Pin_7 | GPIO_Pin_8;
 
 	port_E.GPIO_Mode = GPIO_Mode_IN;
 	port_E.GPIO_OType = GPIO_OType_PP;
@@ -48,4 +48,5 @@ void Przelacznik_konfiguracja_przerwan_zewnetrznych(){
 	Ustaw_pin_dla_przerwania_zewnetrznego(5, GPIO_Pin_5, E);
 	Ustaw_pin_dla_przerwania_zewnetrznego(6, GPIO_Pin_6, E);
 	Ustaw_pin_dla_przerwania_zewnetrznego(7, GPIO_Pin_7, E);
+	Ustaw_pin_dla_przerwania_zewnetrznego(8, GPIO_Pin_8, E);
 }
