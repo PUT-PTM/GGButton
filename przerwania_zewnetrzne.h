@@ -9,9 +9,9 @@
 #ifndef przerwanie
 #define przerwanie
 
-typedef enum port {A, B, C, D, E} port;
+typedef enum Port {A, B, C, D, E} Port;
 
 void Ustaw_przerwanie_zewnetrzne(unsigned char przerwanie_czego);
-void Ustaw_pin_dla_przerwania_zewnetrznego(int linia_przerwania, unsigned int pin, port port_GPIO);
+void Ustaw_pin_dla_przerwania_zewnetrznego(int linia_przerwania, unsigned int pin, Port port_GPIO);
 
 #endif

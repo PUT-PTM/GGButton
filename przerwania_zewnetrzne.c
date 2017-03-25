@@ -14,14 +14,12 @@ void Ustaw_przerwanie_zewnetrzne(unsigned char przerwanie_czego){
 	NVIC_Init(&przerwanie_zewnetrzne);
 }
 
-void Ustaw_pin_dla_przerwania_zewnetrznego(int linia_przerwania, unsigned int pin, port port_GPIO){
+void Ustaw_pin_dla_przerwania_zewnetrznego(int linia_przerwania, unsigned int pin, Port port_GPIO){
 
 	// pin: GPIO_Pin_[x]
 	// nr linia_przerwania == nr pin
 
 	EXTI_InitTypeDef konfiguracja_linii;
-
-
 
 	switch(linia_przerwania){
 
