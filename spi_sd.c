@@ -545,7 +545,7 @@ void disk_timerproc (void)
 DWORD get_fattime (void)
 {
 
-    return  ((2016UL-1980) << 25)    // Year = 2016
+    return  ((2017UL-1980) << 25)    // Year = 2016
             | (3UL << 21)            // Month = March
             | (1UL << 16)            // Day = 1
             | (12U << 11)            // Hour = 12

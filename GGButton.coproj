@@ -81,35 +81,36 @@
   </Components>
   <Files>
     <File name="cmsis_lib/source/stm32f4xx_gpio.c" path="cmsis_lib/source/stm32f4xx_gpio.c" type="1"/>
-    <File name="cmsis_boot/startup/startup_stm32f4xx.c" path="cmsis_boot/startup/startup_stm32f4xx.c" type="1"/>
     <File name="timery.c" path="timery.c" type="1"/>
+    <File name="cmsis_boot/startup/startup_stm32f4xx.c" path="cmsis_boot/startup/startup_stm32f4xx.c" type="1"/>
     <File name="cmsis_lib/source/stm32f4xx_rcc.c" path="cmsis_lib/source/stm32f4xx_rcc.c" type="1"/>
     <File name="cmsis/core_cmInstr.h" path="cmsis/core_cmInstr.h" type="1"/>
     <File name="przerwania_zewnetrzne.c" path="przerwania_zewnetrzne.c" type="1"/>
     <File name="cmsis_boot" path="" type="2"/>
     <File name="cmsis_lib/include/stm32f4xx_syscfg.h" path="cmsis_lib/include/stm32f4xx_syscfg.h" type="1"/>
-    <File name="konfiguracja_przelacznika.h" path="konfiguracja_przelacznika.h" type="1"/>
     <File name="spi_sd.c" path="spi_sd.c" type="1"/>
+    <File name="konfiguracja_przelacznika.h" path="konfiguracja_przelacznika.h" type="1"/>
     <File name="konfiguracja_przelacznika.c" path="konfiguracja_przelacznika.c" type="1"/>
     <File name="timery.h" path="timery.h" type="1"/>
+    <File name="cmsis_lib/include/diskio.h" path="cmsis_lib/include/diskio.h" type="1"/>
     <File name="cmsis_lib/include/ffconf.h" path="cmsis_lib/include/ffconf.h" type="1"/>
-    <File name="cmsis_boot/stm32f4xx.h" path="cmsis_boot/stm32f4xx.h" type="1"/>
-    <File name="cmsis_boot/startup" path="" type="2"/>
     <File name="cmsis/core_cm4_simd.h" path="cmsis/core_cm4_simd.h" type="1"/>
+    <File name="cmsis_boot/startup" path="" type="2"/>
+    <File name="cmsis_boot/stm32f4xx.h" path="cmsis_boot/stm32f4xx.h" type="1"/>
     <File name="cmsis_lib/source/stm32f4xx_spi.c" path="cmsis_lib/source/stm32f4xx_spi.c" type="1"/>
-    <File name="cmsis_lib/source/stm32f4xx_exti.c" path="cmsis_lib/source/stm32f4xx_exti.c" type="1"/>
-    <File name="cmsis/core_cmFunc.h" path="cmsis/core_cmFunc.h" type="1"/>
-    <File name="cmsis_lib/include/stm32f4xx_exti.h" path="cmsis_lib/include/stm32f4xx_exti.h" type="1"/>
     <File name="cmsis_lib/source/ff.c" path="cmsis_lib/source/ff.c" type="1"/>
-    <File name="cmsis/core_cm4.h" path="cmsis/core_cm4.h" type="1"/>
+    <File name="cmsis_lib/include/stm32f4xx_exti.h" path="cmsis_lib/include/stm32f4xx_exti.h" type="1"/>
+    <File name="cmsis/core_cmFunc.h" path="cmsis/core_cmFunc.h" type="1"/>
+    <File name="cmsis_lib/source/stm32f4xx_exti.c" path="cmsis_lib/source/stm32f4xx_exti.c" type="1"/>
     <File name="cmsis_boot/system_stm32f4xx.c" path="cmsis_boot/system_stm32f4xx.c" type="1"/>
+    <File name="cmsis/core_cm4.h" path="cmsis/core_cm4.h" type="1"/>
     <File name="SPI.c" path="cmsis_lib/include/SPI.c" type="1"/>
     <File name="cmsis_lib/include/stm32f4xx_spi.h" path="cmsis_lib/include/stm32f4xx_spi.h" type="1"/>
-    <File name="cmsis" path="" type="2"/>
     <File name="cmsis_lib/source/misc.c" path="cmsis_lib/source/misc.c" type="1"/>
+    <File name="cmsis" path="" type="2"/>
     <File name="cmsis_lib/include/stm32f4xx_tim.h" path="cmsis_lib/include/stm32f4xx_tim.h" type="1"/>
-    <File name="cmsis_lib" path="" type="2"/>
     <File name="przerwania_zewnetrzne.h" path="przerwania_zewnetrzne.h" type="1"/>
+    <File name="cmsis_lib" path="" type="2"/>
     <File name="cmsis_lib/source" path="" type="2"/>
     <File name="cmsis_lib/source/stm32f4xx_tim.c" path="cmsis_lib/source/stm32f4xx_tim.c" type="1"/>
     <File name="cmsis_lib/include/stm32f4xx_gpio.h" path="cmsis_lib/include/stm32f4xx_gpio.h" type="1"/>
@@ -120,8 +121,8 @@
     <File name="SPI.h" path="cmsis_lib/include/SPI.h" type="1"/>
     <File name="cmsis_lib/include" path="" type="2"/>
     <File name="cmsis_lib/include/stm32f4xx_rcc.h" path="cmsis_lib/include/stm32f4xx_rcc.h" type="1"/>
-    <File name="cmsis_lib/source/stm32f4xx_syscfg.c" path="cmsis_lib/source/stm32f4xx_syscfg.c" type="1"/>
     <File name="cmsis_lib/source/ff.h" path="cmsis_lib/source/ff.h" type="1"/>
+    <File name="cmsis_lib/source/stm32f4xx_syscfg.c" path="cmsis_lib/source/stm32f4xx_syscfg.c" type="1"/>
     <File name="main.c" path="main.c" type="1"/>
   </Files>
 </Project>
