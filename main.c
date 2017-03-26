@@ -105,8 +105,6 @@ void EXTI9_5_IRQHandler(void){
 
 void TIM3_IRQHandler(void){
 
-
-
 	if (TIM_GetITStatus(TIM3, TIM_IT_Update) != RESET){
 
 
