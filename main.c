@@ -5,9 +5,11 @@
 #include "stm32f4xx_exti.h"
 #include "stm32f4xx_syscfg.h"
 #include "misc.h"
+#include "stm32f4xx_spi.h"
 #include "konfiguracja_przelacznika.h"
 #include "przerwania_zewnetrzne.h"
 #include "timery.h"
+#include "SPI.h"
 
 int main(void)
 {
@@ -16,6 +18,13 @@ int main(void)
 
 	Przelacznik_konfiguracja();
 	Konfiguracja_zegara_do_DEBOUNCERA_przerwan_zewnetrznych();
+	Konfiguracja_SPI();
+
+
+
+
+
+
 
 
 
@@ -32,6 +41,31 @@ int main(void)
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;
 	GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;
 	GPIO_Init(GPIOD, &GPIO_InitStructure);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     while(1)
