@@ -22,6 +22,14 @@ void Konfiguracja_portow_SPI(){
 	GPIO_PinAFConfig(GPIOB, GPIO_PinSource14, GPIO_AF_SPI2);
 	// MOSI
 	GPIO_PinAFConfig(GPIOB, GPIO_PinSource15, GPIO_AF_SPI2);
+
+	// CS >> TU MOZE SIE JEBNAC
+	port_B.GPIO_Pin = GPIO_Pin_11;
+	port_B.GPIO_Mode = GPIO_Mode_OUT;
+	port_B.GPIO_OType = GPIO_OType_PP;
+	port_B.GPIO_Speed = GPIO_Speed_100MHz;
+	port_B.GPIO_PuPd = GPIO_PuPd_NOPULL;
+	GPIO_Init(GPIOB, &port_B);
 }
 
 void Konfiguracja_struktury_SPI(){
