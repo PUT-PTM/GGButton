@@ -10,6 +10,8 @@
 #include "przerwania_zewnetrzne.h"
 #include "timery.h"
 #include "SPI.h"
+#include "ff.h"
+#include "diskio.h"
 
 int main(void)
 {
@@ -45,7 +47,30 @@ int main(void)
 
 
 
+	FRESULT fresult;
+	 FIL plik;
+	 WORD zapisanych_bajtow;
+	 FATFS fatfs;
 
+
+
+	 disk_initialize(0);// inicjalizacja karty
+	 	fresult = f_mount( &fatfs, 1,1 );// zarejestrowanie dysku logicznego w systemie
+
+	  // Tworzenie pliku
+	  fresult = f_open (&plik,"plik.txt", FA_CREATE_ALWAYS);
+	  fresult = f_close (&plik);
+
+	  // Tworzenie katalogu
+	  fresult = f_mkdir("katalog1");
+
+	  // Zapis pliku
+	 // fresult = f_open (&plik,"plik.txt", FA_WRITE);
+	  //fresult = f_write(&plik, "zawartosc pliku", 15, &zapisanych_bajtow);
+	  //fresult = f_close (&plik);
+
+	  // Usuniecie pliku
+	  //fresult = f_unlink("plik.txt");
 
 
 
