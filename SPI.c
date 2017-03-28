@@ -30,6 +30,8 @@ void Konfiguracja_portow_SPI(){
 	port_B.GPIO_Speed = GPIO_Speed_100MHz;
 	port_B.GPIO_PuPd = GPIO_PuPd_NOPULL;
 	GPIO_Init(GPIOB, &port_B);
+
+	GPIO_SetBits(GPIOB,GPIO_Pin_11);
 }
 
 void Konfiguracja_struktury_SPI(){

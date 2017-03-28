@@ -15,18 +15,6 @@
 <part id="2"/>
 <part id="3"/>
 <part id="4"/>
-<part id="5"/>
-<part id="6"/>
-<part id="7"/>
-<part id="8"/>
-<part id="9"/>
-<part id="10"/>
-<part id="11"/>
-<part id="12"/>
-<part id="13"/>
-<part id="14"/>
-<part id="15"/>
-<part id="16"/>
 </presentation>
 </folder>
 </info>
@@ -36,81 +24,35 @@
 </input>
 </editor>
 <editor id="org.coocox.builder.ui.editors.repository.RepositoryBrowser" name="Repository" partName="Repository" title="Repository" tooltip="Repository" workbook="DefaultEditorWorkbook">
-<input factoryID="org.coocox.component.ui.editors.repository.RepositoryElementFactory">&#x0A;<subPage horizontalPosition="0" selectedItemId="509" subPageIndex="2" verticalPosition="41"/>
+<input factoryID="org.coocox.component.ui.editors.repository.RepositoryElementFactory">&#x0A;<subPage horizontalPosition="0" selectedItemId="524" subPageIndex="2" verticalPosition="12"/>
 </input>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="C:/Users/Gaca1111/Desktop/GGbutton/GGButton/main.c" title="main.c" tooltip="C:/Users/Gaca1111/Desktop/GGbutton/GGButton/main.c" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="C:/Users/Gaca1111/Desktop/SD/main.c" title="main.c" tooltip="C:/Users/Gaca1111/Desktop/SD/main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GGButton/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1082" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="411" selectionTopPixel="2268"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="przerwania_zewnetrzne.c" partName="przerwania_zewnetrzne.c" path="C:/Users/Gaca1111/Desktop/GGbutton/GGButton/przerwania_zewnetrzne.c" title="przerwania_zewnetrzne.c" tooltip="C:/Users/Gaca1111/Desktop/GGbutton/GGButton/przerwania_zewnetrzne.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GGButton/przerwania_zewnetrzne.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="200" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="przerwania_zewnetrzne.h" partName="przerwania_zewnetrzne.h" path="C:/Users/Gaca1111/Desktop/GGbutton/GGButton/przerwania_zewnetrzne.h" title="przerwania_zewnetrzne.h" tooltip="C:/Users/Gaca1111/Desktop/GGbutton/GGButton/przerwania_zewnetrzne.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GGButton/przerwania_zewnetrzne.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="458" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="konfiguracja_przelacznika.c" partName="konfiguracja_przelacznika.c" path="C:/Users/Gaca1111/Desktop/GGbutton/GGButton/konfiguracja_przelacznika.c" title="konfiguracja_przelacznika.c" tooltip="C:/Users/Gaca1111/Desktop/GGbutton/GGButton/konfiguracja_przelacznika.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GGButton/konfiguracja_przelacznika.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1210" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="konfiguracja_przelacznika.h" partName="konfiguracja_przelacznika.h" path="C:/Users/Gaca1111/Desktop/GGbutton/GGButton/konfiguracja_przelacznika.h" title="konfiguracja_przelacznika.h" tooltip="C:/Users/Gaca1111/Desktop/GGbutton/GGButton/konfiguracja_przelacznika.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GGButton/konfiguracja_przelacznika.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="55" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx.h" partName="stm32f4xx.h" path="C:/Users/Gaca1111/Desktop/GGbutton/GGButton/cmsis_boot/stm32f4xx.h" title="stm32f4xx.h" tooltip="C:/Users/Gaca1111/Desktop/GGbutton/GGButton/cmsis_boot/stm32f4xx.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GGButton/cmsis_boot/stm32f4xx.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3654" selectionTopPixel="1700"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="timery.h" partName="timery.h" path="C:/Users/Gaca1111/Desktop/GGbutton/GGButton/timery.h" title="timery.h" tooltip="C:/Users/Gaca1111/Desktop/GGbutton/GGButton/timery.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GGButton/timery.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="227" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="timery.c" partName="timery.c" path="C:/Users/Gaca1111/Desktop/GGbutton/GGButton/timery.c" title="timery.c" tooltip="C:/Users/Gaca1111/Desktop/GGbutton/GGButton/timery.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GGButton/timery.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1358" selectionTopPixel="1348"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="integer.h" partName="integer.h" path="C:/Users/Gaca1111/Desktop/GGbutton/GGButton/cmsis_lib/include/integer.h" title="integer.h" tooltip="C:/Users/Gaca1111/Desktop/GGbutton/GGButton/cmsis_lib/include/integer.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GGButton/cmsis_lib/include/integer.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="263" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="SPI.c" partName="SPI.c" path="C:/Users/Gaca1111/Desktop/GGbutton/GGButton/cmsis_lib/include/SPI.c" title="SPI.c" tooltip="C:/Users/Gaca1111/Desktop/GGbutton/GGButton/cmsis_lib/include/SPI.c" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="SPI.c" partName="SPI.c" path="C:/Users/Gaca1111/Desktop/GGButton/SPI.c" title="SPI.c" tooltip="C:/Users/Gaca1111/Desktop/GGButton/SPI.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GGButton/SPI.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1345" selectionTopPixel="150"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="829" selectionTopPixel="10"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="SPI.h" partName="SPI.h" path="C:/Users/Gaca1111/Desktop/GGbutton/GGButton/cmsis_lib/include/SPI.h" title="SPI.h" tooltip="C:/Users/Gaca1111/Desktop/GGbutton/GGButton/cmsis_lib/include/SPI.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GGButton/SPI.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="242" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="ff.c" partName="ff.c" path="C:/Users/Gaca1111/Desktop/GGbutton/GGButton/cmsis_lib/source/ff.c" title="ff.c" tooltip="C:/Users/Gaca1111/Desktop/GGbutton/GGButton/cmsis_lib/source/ff.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GGButton/cmsis_lib/source/ff.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="88" selectionOffset="6024" selectionTopPixel="69884"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="misc.c" partName="misc.c" path="C:/Users/Gaca1111/Desktop/GGbutton/GGButton/cmsis_lib/source/misc.c" title="misc.c" tooltip="C:/Users/Gaca1111/Desktop/GGbutton/GGButton/cmsis_lib/source/misc.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GGButton/cmsis_lib/source/misc.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="spi_sd.c" partName="spi_sd.c" path="C:/Users/Gaca1111/Desktop/GGbutton/GGButton/spi_sd.c" title="spi_sd.c" tooltip="C:/Users/Gaca1111/Desktop/GGbutton/GGButton/spi_sd.c" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="spi_sd.c" partName="spi_sd.c" path="C:/Users/Gaca1111/Desktop/GGButton/spi_sd.c" title="spi_sd.c" tooltip="C:/Users/Gaca1111/Desktop/GGButton/spi_sd.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GGButton/spi_sd.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="17404" selectionTopPixel="30"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="diskio.h" partName="diskio.h" path="C:/Users/Gaca1111/Desktop/GGbutton/GGButton/cmsis_lib/include/diskio.h" title="diskio.h" tooltip="C:/Users/Gaca1111/Desktop/GGbutton/GGButton/cmsis_lib/include/diskio.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GGButton/cmsis_lib/include/diskio.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="70" selectionOffset="822" selectionTopPixel="360"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="660"/>
 </editor>
 </editors>
 <views>
 <view id="org.coocox.builder.ui.views.ProjectView" partName="Project">
-<viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="1">
+<viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="17">
 <expanded>
 <element path="/GGButton"/>
+<element path="/GGButton/cmsis"/>
+<element path="/GGButton/cmsis_boot"/>
+<element path="/GGButton/cmsis_boot/startup"/>
 <element path="/GGButton/cmsis_lib"/>
 <element path="/GGButton/cmsis_lib/include"/>
-<element path="/GGButton/cmsis_lib/source"/>
 </expanded>
 <selection>
-<element path="/GGButton/cmsis_lib/include"/>
+<element path="/GGButton/main.c"/>
 </selection>
 </viewState>
 </view>
@@ -161,7 +103,7 @@
 <fastViewBars/>
 <layout>
 <mainWindow>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@17180b9">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1f45123">
 <folder activePageID="org.coocox.component.ui.ComponentView" appearance="2" expanded="2">
 <page content="org.coocox.component.ui.ComponentView" label="Components"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
@@ -169,13 +111,13 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="1434" ratioRight="478" relationship="2" relative="org.eclipse.ui.internal.ViewStack@17180b9">
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="1434" ratioRight="478" relationship="2" relative="org.eclipse.ui.internal.ViewStack@1f45123">
 <folder appearance="2" expanded="2">
 <page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@a282b1" ratio="0.6995662" ratioLeft="645" ratioRight="277" relationship="4" relative="org.eclipse.ui.internal.ViewStack@17180b9">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1af5487" ratio="0.6995662" ratioLeft="645" ratioRight="277" relationship="4" relative="org.eclipse.ui.internal.ViewStack@1f45123">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
@@ -183,8 +125,8 @@
 </presentation>
 </folder>
 </info>
-<info part="org.coocox.builder.ui.exampleView" ratio="0.2994975" ratioLeft="298" ratioRight="697" relationship="2" relative="org.eclipse.ui.internal.ViewStack@17180b9"/>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@14569a5" ratio="0.8146853" ratioLeft="466" ratioRight="106" relationship="2" relative="org.coocox.builder.ui.exampleView">
+<info part="org.coocox.builder.ui.exampleView" ratio="0.21966527" ratioLeft="420" ratioRight="1492" relationship="2" relative="org.eclipse.ui.internal.ViewStack@1f45123"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@bcc0e6" ratio="0.71983916" ratioLeft="1074" ratioRight="418" relationship="2" relative="org.coocox.builder.ui.exampleView">
 <folder activePageID="org.coocox.component.ui.Help" appearance="2" expanded="2">
 <page content="org.coocox.component.ui.Help" label="Help"/>
 <page content="org.eclipse.debug.ui.BreakpointView" label="LabelNotFound"/>
@@ -197,7 +139,7 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.44902387" ratioLeft="414" ratioRight="508" relationship="4" relative="org.coocox.builder.ui.exampleView"/>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@ba26bd" ratio="0.36984816" ratioLeft="341" ratioRight="581" relationship="4" relative="org.eclipse.ui.internal.ViewStack@17180b9">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@faffff" ratio="0.36984816" ratioLeft="341" ratioRight="581" relationship="4" relative="org.eclipse.ui.internal.ViewStack@1f45123">
 <folder activePageID="org.coocox.builder.ui.views.ProjectView" appearance="2" expanded="2">
 <page content="org.coocox.builder.ui.views.ProjectView" label="Project"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
@@ -212,166 +154,166 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GGButton/main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GGButton/SPI.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GGButton/SPI.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GGButton/cmsis_lib/source/diskio.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GGButton/cmsis_lib/source/ff.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GGButton/cmsis_lib/source/misc.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GGButton/spi_sd.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GGButton/cmsis_lib/include/diskio.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GGButton/cmsis_lib/source/diskio.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GGButton/cmsis_lib/include/diskio.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GGButton/main.c"/>
+<editor factoryID="org.coocox.builder.ui.persistent.PersistentElementFactory" id="org.coocox.welcome.ui.WelcomePage">
+<org.coocox.welcome.ui.WelcomePage/>
+</editor>
+<editor factoryID="org.coocox.component.ui.editors.repository.RepositoryElementFactory" id="org.coocox.builder.ui.editors.repository.RepositoryBrowser">
+<subPage horizontalPosition="0" selectedItemId="524" subPageIndex="2" verticalPosition="12"/>
+</editor>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GGButton/SPI.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GGButton/spi_sd.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GGButton/SPI.c"/>
 </editors>
-<item historyLabel="SPI.h" index="2">
-<position info="not_deleted" x="369" y="0"/>
-</item>
-<item historyLabel="SPI.c" index="1">
-<position info="not_deleted" x="107" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="1096" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="543" y="0"/>
-</item>
-<item historyLabel="diskio.c" index="3">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="ff.c" index="4">
-<position info="not_deleted" x="6024" y="88"/>
-</item>
-<item historyLabel="misc.c" index="5">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="SPI.h" index="2">
-<position info="not_deleted" x="242" y="0"/>
-</item>
-<item historyLabel="SPI.c" index="1">
-<position info="not_deleted" x="849" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="887" y="150"/>
-</item>
-<item historyLabel="SPI.c" index="1">
-<position info="not_deleted" x="1375" y="0"/>
-</item>
-<item historyLabel="diskio.c" index="3">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="ff.c" index="4">
-<position info="not_deleted" x="6024" y="88"/>
-</item>
-<item historyLabel="spi_sd.c" index="6">
-<position info="not_deleted" x="597" y="0"/>
-</item>
-<item historyLabel="SPI.c" index="1">
-<position info="not_deleted" x="1375" y="0"/>
-</item>
-<item historyLabel="spi_sd.c" index="6">
-<position info="not_deleted" x="2042" y="0"/>
-</item>
-<item historyLabel="SPI.c" index="1">
-<position info="not_deleted" x="1345" y="0"/>
-</item>
-<item historyLabel="spi_sd.c" index="6">
-<position info="not_deleted" x="558" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="1082" y="0"/>
-</item>
-<item historyLabel="spi_sd.c" index="6">
-<position info="not_deleted" x="10229" y="20"/>
-</item>
-<item historyLabel="spi_sd.c" index="6">
+<item historyLabel="spi_sd.c" index="0">
 <position info="not_deleted" x="11629" y="21"/>
 </item>
-<item historyLabel="spi_sd.c" index="6">
+<item historyLabel="spi_sd.c" index="0">
 <position info="not_deleted" x="9996" y="0"/>
 </item>
-<item historyLabel="diskio.h" index="7">
+<item historyLabel="diskio.h" index="1">
 <position info="not_deleted" x="822" y="70"/>
 </item>
-<item historyLabel="spi_sd.c" index="6">
+<item historyLabel="spi_sd.c" index="0">
 <position info="not_deleted" x="10229" y="20"/>
 </item>
-<item historyLabel="diskio.h" index="7">
+<item historyLabel="diskio.h" index="1">
 <position info="not_deleted" x="822" y="70"/>
 </item>
-<item historyLabel="spi_sd.c" index="6">
+<item historyLabel="spi_sd.c" index="0">
 <position info="not_deleted" x="10229" y="20"/>
 </item>
-<item historyLabel="diskio.h" index="7">
+<item historyLabel="diskio.h" index="1">
 <position info="not_deleted" x="822" y="70"/>
 </item>
-<item historyLabel="spi_sd.c" index="6">
+<item historyLabel="spi_sd.c" index="0">
 <position info="not_deleted" x="10229" y="20"/>
 </item>
-<item historyLabel="spi_sd.c" index="6">
+<item historyLabel="spi_sd.c" index="0">
 <position info="not_deleted" x="11629" y="21"/>
 </item>
-<item historyLabel="spi_sd.c" index="6">
+<item historyLabel="spi_sd.c" index="0">
 <position info="not_deleted" x="10229" y="20"/>
 </item>
-<item historyLabel="spi_sd.c" index="6">
+<item historyLabel="spi_sd.c" index="0">
 <position info="not_deleted" x="10497" y="0"/>
 </item>
-<item historyLabel="spi_sd.c" index="6">
+<item historyLabel="spi_sd.c" index="0">
 <position info="not_deleted" x="11629" y="21"/>
 </item>
-<item historyLabel="spi_sd.c" index="6">
+<item historyLabel="spi_sd.c" index="0">
 <position info="not_deleted" x="7568" y="2"/>
 </item>
-<item historyLabel="diskio.c" index="8">
+<item historyLabel="diskio.c" index="2">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="diskio.c" index="8">
+<item historyLabel="diskio.c" index="2">
 <position info="not_deleted" x="1994" y="3"/>
 </item>
-<item historyLabel="spi_sd.c" index="6">
+<item historyLabel="spi_sd.c" index="0">
 <position info="not_deleted" x="7568" y="2"/>
 </item>
-<item historyLabel="diskio.c" index="8">
+<item historyLabel="diskio.c" index="2">
 <position info="not_deleted" x="1994" y="3"/>
 </item>
-<item historyLabel="spi_sd.c" index="6">
+<item historyLabel="spi_sd.c" index="0">
 <position info="not_deleted" x="7568" y="2"/>
 </item>
-<item historyLabel="diskio.c" index="8">
+<item historyLabel="diskio.c" index="2">
 <position info="not_deleted" x="1994" y="3"/>
 </item>
-<item historyLabel="diskio.c" index="8">
+<item historyLabel="diskio.c" index="2">
 <position info="not_deleted" x="1260" y="3"/>
 </item>
-<item historyLabel="diskio.c" index="8">
+<item historyLabel="diskio.c" index="2">
 <position info="not_deleted" x="1994" y="3"/>
 </item>
-<item historyLabel="spi_sd.c" index="6">
+<item historyLabel="spi_sd.c" index="0">
 <position info="not_deleted" x="7568" y="2"/>
 </item>
-<item historyLabel="spi_sd.c" index="6">
+<item historyLabel="spi_sd.c" index="0">
 <position info="not_deleted" x="11837" y="0"/>
 </item>
-<item historyLabel="spi_sd.c" index="6">
+<item historyLabel="spi_sd.c" index="0">
 <position info="not_deleted" x="530" y="1"/>
 </item>
-<item historyLabel="spi_sd.c" index="6">
+<item historyLabel="spi_sd.c" index="0">
 <position info="not_deleted" x="559" y="0"/>
 </item>
-<item historyLabel="spi_sd.c" index="6">
+<item historyLabel="spi_sd.c" index="0">
 <position info="not_deleted" x="10229" y="20"/>
 </item>
-<item historyLabel="spi_sd.c" index="6">
+<item historyLabel="spi_sd.c" index="0">
 <position info="not_deleted" x="10446" y="4"/>
 </item>
-<item historyLabel="spi_sd.c" index="6">
+<item historyLabel="spi_sd.c" index="0">
 <position info="not_deleted" x="11629" y="21"/>
 </item>
-<item historyLabel="diskio.h" index="9">
+<item historyLabel="diskio.h" index="3">
 <position info="not_deleted" x="822" y="70"/>
 </item>
-<item active="true" historyLabel="spi_sd.c" index="6">
+<item historyLabel="spi_sd.c" index="0">
 <position info="not_deleted" x="17404" y="0"/>
+</item>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="1115" y="0"/>
+</item>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="1482" y="0"/>
+</item>
+<item historyLabel="welcome" index="5"/>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="174" y="17"/>
+</item>
+<item historyLabel="Repository" index="6"/>
+<item historyLabel="main.c" index="4">
+<position/>
+</item>
+<item historyLabel="SPI.c" index="7">
+<position info="not_deleted" x="16" y="0"/>
+</item>
+<item historyLabel="main.c" index="4">
+<position/>
+</item>
+<item historyLabel="SPI.c" index="7">
+<position info="not_deleted" x="571" y="0"/>
+</item>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="1336" y="0"/>
+</item>
+<item historyLabel="SPI.c" index="7">
+<position info="not_deleted" x="571" y="0"/>
+</item>
+<item historyLabel="SPI.c" index="7">
+<position info="not_deleted" x="855" y="0"/>
+</item>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="1332" y="0"/>
+</item>
+<item historyLabel="spi_sd.c" index="8">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="SPI.c" index="7">
+<position info="not_deleted" x="829" y="0"/>
+</item>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="1332" y="0"/>
+</item>
+<item historyLabel="SPI.c" index="9">
+<position info="not_deleted" x="829" y="0"/>
+</item>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="1324" y="0"/>
+</item>
+<item historyLabel="main.c" index="4">
+<position info="not_deleted" x="3591" y="0"/>
+</item>
+<item active="true" historyLabel="main.c" index="4">
+<position info="not_deleted" x="920" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -380,11 +322,20 @@
 <actionBarAdvisor/>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="GGButton/main.c">
+<persistable path="/GGButton/main.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="SPI.h" tooltip="GGButton/SPI.h">
+<persistable path="/GGButton/SPI.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx.h" tooltip="GGButton/cmsis_boot/stm32f4xx.h">
+<persistable path="/GGButton/cmsis_boot/stm32f4xx.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_gpio.h" tooltip="GGButton/cmsis_lib/include/stm32f4xx_gpio.h">
+<persistable path="/GGButton/cmsis_lib/include/stm32f4xx_gpio.h"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="diskio.h" tooltip="GGButton/cmsis_lib/include/diskio.h">
 <persistable path="/GGButton/cmsis_lib/include/diskio.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="spi_sd.c" tooltip="GGButton/spi_sd.c">
-<persistable path="/GGButton/spi_sd.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="misc.c" tooltip="GGButton/cmsis_lib/source/misc.c">
 <persistable path="/GGButton/cmsis_lib/source/misc.c"/>
@@ -395,35 +346,26 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="diskio.c" tooltip="GGButton/cmsis_lib/source/diskio.c">
 <persistable path="/GGButton/cmsis_lib/source/diskio.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="SPI.h" tooltip="GGButton/SPI.h">
-<persistable path="/GGButton/SPI.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="SPI.c" tooltip="GGButton/SPI.c">
-<persistable path="/GGButton/SPI.c"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="integer.h" tooltip="GGButton/cmsis_lib/include/integer.h">
 <persistable path="/GGButton/cmsis_lib/include/integer.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="timery.c" tooltip="GGButton/timery.c">
-<persistable path="/GGButton/timery.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="timery.h" tooltip="GGButton/timery.h">
-<persistable path="/GGButton/timery.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx.h" tooltip="GGButton/cmsis_boot/stm32f4xx.h">
-<persistable path="/GGButton/cmsis_boot/stm32f4xx.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="konfiguracja_przelacznika.h" tooltip="GGButton/konfiguracja_przelacznika.h">
-<persistable path="/GGButton/konfiguracja_przelacznika.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="konfiguracja_przelacznika.c" tooltip="GGButton/konfiguracja_przelacznika.c">
-<persistable path="/GGButton/konfiguracja_przelacznika.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="przerwania_zewnetrzne.h" tooltip="GGButton/przerwania_zewnetrzne.h">
-<persistable path="/GGButton/przerwania_zewnetrzne.h"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="przerwania_zewnetrzne.c" tooltip="GGButton/przerwania_zewnetrzne.c">
 <persistable path="/GGButton/przerwania_zewnetrzne.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_gpio.h" tooltip="GGButton/cmsis_lib/include/stm32f4xx_gpio.h">
+<persistable path="/GGButton/cmsis_lib/include/stm32f4xx_gpio.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="diskio.h" tooltip="GGButton/cmsis_lib/include/diskio.h">
+<persistable path="/GGButton/cmsis_lib/include/diskio.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="test/main.c">
+<persistable path="/test/main.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="spi_sd.c" tooltip="GGButton/spi_sd.c">
+<persistable path="/GGButton/spi_sd.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="diskio.h" tooltip="GGButton/cmsis_lib/include/diskio.h">
+<persistable path="/GGButton/cmsis_lib/include/diskio.h"/>
 </file>
 </mruList>
 </workbench>
