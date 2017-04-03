@@ -9,6 +9,8 @@
 
 
 #include "SPI.h"
+#include "przyciski.h"
+#include "debouncer.h"
 #include "ff.h"
 #include "diskio.h"
 
@@ -19,8 +21,8 @@ int main(void)
 
 
 	Konfiguracja_SPI();
-
-
+	Konfiguracja_przyciskow();
+	Konfiguracja_debouncera();
 
 
 
@@ -38,26 +40,18 @@ int main(void)
 
 
 	  // Tworzenie pliku
-	  fresult = f_open (&plik,"lastone.txt", FA_CREATE_ALWAYS);
+	  fresult = f_open (&plik,"xdd.txt", FA_CREATE_ALWAYS);
 	  fresult = f_close (&plik);
 
 	  // Tworzenie katalogu
 
-	  fresult = f_mkdir("folder");
+	  fresult = f_mkdir("aaaaaa");
 
 
 
 
 
-	  RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
-	  	GPIO_InitTypeDef GPIO_InitStructure;
 
-	  	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0;
-	  	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN;
-	  	GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
-	  	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;
-	  	GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_DOWN;
-	  	GPIO_Init(GPIOA, &GPIO_InitStructure);
 
 	  	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD, ENABLE);
 	  	GPIO_InitTypeDef diody;
@@ -71,43 +65,12 @@ int main(void)
 
 
 
-	  	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE);
-	  	TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure;
-	  	TIM_TimeBaseStructure.TIM_Period = 199;
-	  	TIM_TimeBaseStructure.TIM_Prescaler = 8399;
-	  	TIM_TimeBaseStructure.TIM_ClockDivision = TIM_CKD_DIV1;
-	  	TIM_TimeBaseStructure.TIM_CounterMode =  TIM_CounterMode_Up;
-	  	TIM_TimeBaseInit(TIM3, &TIM_TimeBaseStructure);
 
-	  	TIM_Cmd(TIM3, DISABLE);
 
-	  	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1);
-	  	NVIC_InitTypeDef NVIC_InitStructure;
-	  	NVIC_InitStructure.NVIC_IRQChannel = EXTI0_IRQn;
-	  	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0x00;
-	  	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0x00;
-	  	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
-	  	NVIC_Init(&NVIC_InitStructure);
+		//
 
-	  	EXTI_InitTypeDef EXTI_InitStructure;
-	  	EXTI_InitStructure. EXTI_Line = EXTI_Line0;
-	  	EXTI_InitStructure. EXTI_Mode = EXTI_Mode_Interrupt;
-	  	EXTI_InitStructure. EXTI_Trigger = EXTI_Trigger_Rising;
-	  	EXTI_InitStructure. EXTI_LineCmd = ENABLE;
-	  	EXTI_Init(&EXTI_InitStructure);
 
-	  	SYSCFG_EXTILineConfig(GPIOA, EXTI_PinSource0);
 
-	  	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1);
-	  	NVIC_InitTypeDef przerwanie;
-	  	przerwanie.NVIC_IRQChannel = TIM3_IRQn;
-	  	przerwanie.NVIC_IRQChannelPreemptionPriority = 0x00;
-	  	przerwanie.NVIC_IRQChannelSubPriority = 0x00;
-	  	przerwanie.NVIC_IRQChannelCmd = ENABLE;
-	  	NVIC_Init(&przerwanie);
-
-	  	TIM_ClearITPendingBit(TIM3, TIM_IT_Update);
-	  	TIM_ITConfig(TIM3, TIM_IT_Update, ENABLE);
 
 
 
@@ -119,24 +82,136 @@ int main(void)
 	      }
 }
 
-void EXTI0_IRQHandler ( void ){
-		if (EXTI_GetITStatus(EXTI_Line0) != RESET){
-			TIM_Cmd(TIM3, ENABLE);
-		}
+void EXTI1_IRQHandler ( void ){
+
+	if (EXTI_GetITStatus(EXTI_Line1) != RESET){
+
+		TIM_Cmd(TIM3, ENABLE);
 	}
+}
+
+void EXTI2_IRQHandler ( void ){
+
+	if (EXTI_GetITStatus(EXTI_Line2) != RESET){
+
+		TIM_Cmd(TIM3, ENABLE);
+	}
+}
+
+void EXTI3_IRQHandler ( void ){
+
+	if (EXTI_GetITStatus(EXTI_Line3) != RESET){
+
+		TIM_Cmd(TIM3, ENABLE);
+	}
+}
+
+void EXTI4_IRQHandler ( void ){
+
+	if (EXTI_GetITStatus(EXTI_Line4) != RESET){
+
+		TIM_Cmd(TIM3, ENABLE);
+	}
+}
+
+void EXTI9_5_IRQHandler ( void ){
+
+	if (EXTI_GetITStatus(EXTI_Line5) |
+		EXTI_GetITStatus(EXTI_Line6) |
+		EXTI_GetITStatus(EXTI_Line7) |
+		EXTI_GetITStatus(EXTI_Line8) |
+		EXTI_GetITStatus(EXTI_Line9) != RESET){
+
+		TIM_Cmd(TIM3, ENABLE);
+	}
+}
 
 void TIM3_IRQHandler ( void ){
-	if (TIM_GetITStatus(TIM3, TIM_IT_Update) != RESET){
-		if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0)){
 
+	if (TIM_GetITStatus(TIM3, TIM_IT_Update) != RESET){
+
+		if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_1)){
 
 			GPIO_ToggleBits(GPIOD, GPIO_Pin_12);
+
+			TIM_Cmd(TIM3, DISABLE);
+			TIM3->CNT = 0;
+		}
+
+		if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_2)){
+
+			GPIO_ToggleBits(GPIOD, GPIO_Pin_12);
+
+			TIM_Cmd(TIM3, DISABLE);
+			TIM3->CNT = 0;
+		}
+
+		if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_3)){
+
+			GPIO_ToggleBits(GPIOD, GPIO_Pin_12);
+
+			TIM_Cmd(TIM3, DISABLE);
+			TIM3->CNT = 0;
+		}
+
+		if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_4)){
+
+			GPIO_ToggleBits(GPIOD, GPIO_Pin_12);
+
+			TIM_Cmd(TIM3, DISABLE);
+			TIM3->CNT = 0;
+		}
+
+		if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_5)){
+
+			GPIO_ToggleBits(GPIOD, GPIO_Pin_12);
+
+			TIM_Cmd(TIM3, DISABLE);
+			TIM3->CNT = 0;
+		}
+
+		if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_6)){
+
+			GPIO_ToggleBits(GPIOD, GPIO_Pin_12);
+
+			TIM_Cmd(TIM3, DISABLE);
+			TIM3->CNT = 0;
+		}
+
+		if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_7)){
+
+			GPIO_ToggleBits(GPIOD, GPIO_Pin_12);
+
+			TIM_Cmd(TIM3, DISABLE);
+			TIM3->CNT = 0;
+		}
+
+		if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_8)){
+
+			GPIO_ToggleBits(GPIOD, GPIO_Pin_12);
+
+			TIM_Cmd(TIM3, DISABLE);
+			TIM3->CNT = 0;
+		}
+
+		if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_9)){
+
+			GPIO_ToggleBits(GPIOD, GPIO_Pin_12);
+
 			TIM_Cmd(TIM3, DISABLE);
 			TIM3->CNT = 0;
 		}
 
 		TIM_ClearITPendingBit(TIM3, TIM_IT_Update);
-		EXTI_ClearITPendingBit(EXTI_Line0);
+		EXTI_ClearITPendingBit(EXTI_Line1);
+		EXTI_ClearITPendingBit(EXTI_Line2);
+		EXTI_ClearITPendingBit(EXTI_Line3);
+		EXTI_ClearITPendingBit(EXTI_Line4);
+		EXTI_ClearITPendingBit(EXTI_Line5);
+		EXTI_ClearITPendingBit(EXTI_Line6);
+		EXTI_ClearITPendingBit(EXTI_Line7);
+		EXTI_ClearITPendingBit(EXTI_Line8);
+		EXTI_ClearITPendingBit(EXTI_Line9);
 	}
 }
 

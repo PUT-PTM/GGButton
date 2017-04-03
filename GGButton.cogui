@@ -27,9 +27,9 @@
 <input factoryID="org.coocox.component.ui.editors.repository.RepositoryElementFactory">&#x0A;<subPage horizontalPosition="0" selectedItemId="524" subPageIndex="2" verticalPosition="12"/>
 </input>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="C:/Users/Gaca1111/Desktop/SD/main.c" title="main.c" tooltip="C:/Users/Gaca1111/Desktop/SD/main.c" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="C:/Users/Gaca1111/Desktop/GGButton/GGButton/main.c" title="main.c" tooltip="C:/Users/Gaca1111/Desktop/GGButton/GGButton/main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GGButton/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="411" selectionTopPixel="2268"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="796" selectionTopPixel="450"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="SPI.c" partName="SPI.c" path="C:/Users/Gaca1111/Desktop/GGButton/SPI.c" title="SPI.c" tooltip="C:/Users/Gaca1111/Desktop/GGButton/SPI.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GGButton/SPI.c"/>
@@ -51,9 +51,6 @@
 <element path="/GGButton/cmsis_lib"/>
 <element path="/GGButton/cmsis_lib/include"/>
 </expanded>
-<selection>
-<element path="/GGButton/main.c"/>
-</selection>
 </viewState>
 </view>
 <view id="org.coocox.component.ui.ComponentView" partName="Components">
@@ -168,13 +165,8 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GGButton/SPI.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GGButton/spi_sd.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GGButton/SPI.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/GGButton/README.md"/>
 </editors>
-<item historyLabel="spi_sd.c" index="0">
-<position info="not_deleted" x="11629" y="21"/>
-</item>
-<item historyLabel="spi_sd.c" index="0">
-<position info="not_deleted" x="9996" y="0"/>
-</item>
 <item historyLabel="diskio.h" index="1">
 <position info="not_deleted" x="822" y="70"/>
 </item>
@@ -312,8 +304,14 @@
 <item historyLabel="main.c" index="4">
 <position info="not_deleted" x="3591" y="0"/>
 </item>
-<item active="true" historyLabel="main.c" index="4">
+<item historyLabel="main.c" index="4">
 <position info="not_deleted" x="920" y="0"/>
+</item>
+<item historyLabel="README.md" index="10">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item active="true" historyLabel="main.c" index="4">
+<position info="not_deleted" x="796" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -363,9 +361,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="spi_sd.c" tooltip="GGButton/spi_sd.c">
 <persistable path="/GGButton/spi_sd.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="diskio.h" tooltip="GGButton/cmsis_lib/include/diskio.h">
-<persistable path="/GGButton/cmsis_lib/include/diskio.h"/>
 </file>
 </mruList>
 </workbench>
