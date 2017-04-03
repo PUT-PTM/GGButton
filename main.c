@@ -7,45 +7,55 @@
 #include "misc.h"
 #include "stm32f4xx_spi.h"
 
+#include "ff.h"
+#include "diskio.h"
 
 #include "SPI.h"
 #include "przyciski.h"
 #include "debouncer.h"
-#include "ff.h"
-#include "diskio.h"
+#include "karta_SD.h"
+
+FRESULT fresult;
+FIL plik_wav;
+WORD zapisanych_bajtow;
+FATFS fatfs;
 
 int main(void)
 {
+
+
+
+
+
+
+
 	SystemInit();
 	//RCC_APB2PeriphClockCmd(RCC_APB2Periph_SYSCFG, ENABLE);
+
+
 
 
 	Konfiguracja_SPI();
 	Konfiguracja_przyciskow();
 	Konfiguracja_debouncera();
+	Inicjalizacja_karty_SD(&fresult, &fatfs);
 
 
 
 
 
-	FRESULT fresult;
-	 FIL plik;
-	 WORD zapisanych_bajtow;
-	 FATFS fatfs;
 
 
 
-	 disk_initialize(0);// inicjalizacja karty
-	 	fresult = f_mount( &fatfs, 1,1 );// zarejestrowanie dysku logicznego w systemie
 
 
 	  // Tworzenie pliku
-	  fresult = f_open (&plik,"xdd.txt", FA_CREATE_ALWAYS);
-	  fresult = f_close (&plik);
+	  //fresult = f_open (&plik_wav,"abc", FA_CREATE_ALWAYS);  //FA_READ
+	  //fresult = f_close (&plik_wav);
 
 	  // Tworzenie katalogu
 
-	  fresult = f_mkdir("aaaaaa");
+	  //fresult = f_mkdir("qaz");
 
 
 
@@ -116,10 +126,10 @@ void EXTI4_IRQHandler ( void ){
 
 void EXTI9_5_IRQHandler ( void ){
 
-	if (EXTI_GetITStatus(EXTI_Line5) |
-		EXTI_GetITStatus(EXTI_Line6) |
-		EXTI_GetITStatus(EXTI_Line7) |
-		EXTI_GetITStatus(EXTI_Line8) |
+	if (EXTI_GetITStatus(EXTI_Line5) ||
+		EXTI_GetITStatus(EXTI_Line6) ||
+		EXTI_GetITStatus(EXTI_Line7) ||
+		EXTI_GetITStatus(EXTI_Line8) ||
 		EXTI_GetITStatus(EXTI_Line9) != RESET){
 
 		TIM_Cmd(TIM3, ENABLE);
@@ -132,6 +142,8 @@ void TIM3_IRQHandler ( void ){
 
 		if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_1)){
 
+			Otworz_plik(&fresult, &plik_wav, "1.wav");
+
 			GPIO_ToggleBits(GPIOD, GPIO_Pin_12);
 
 			TIM_Cmd(TIM3, DISABLE);
@@ -140,13 +152,17 @@ void TIM3_IRQHandler ( void ){
 
 		if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_2)){
 
+			Otworz_plik(&fresult, &plik_wav,"2.wav");
+
 			GPIO_ToggleBits(GPIOD, GPIO_Pin_12);
 
 			TIM_Cmd(TIM3, DISABLE);
 			TIM3->CNT = 0;
 		}
-
+/*
 		if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_3)){
+
+			Otworz_plik(&fresult, &plik_wav,"3.wav");
 
 			GPIO_ToggleBits(GPIOD, GPIO_Pin_12);
 
@@ -156,6 +172,8 @@ void TIM3_IRQHandler ( void ){
 
 		if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_4)){
 
+			Otworz_plik(&fresult, &plik_wav,"4.wav");
+
 			GPIO_ToggleBits(GPIOD, GPIO_Pin_12);
 
 			TIM_Cmd(TIM3, DISABLE);
@@ -163,6 +181,8 @@ void TIM3_IRQHandler ( void ){
 		}
 
 		if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_5)){
+
+			Otworz_plik(&fresult, &plik_wav,"5.wav");
 
 			GPIO_ToggleBits(GPIOD, GPIO_Pin_12);
 
@@ -172,21 +192,27 @@ void TIM3_IRQHandler ( void ){
 
 		if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_6)){
 
+			Otworz_plik(&fresult, &plik_wav,"6.wav");
+
 			GPIO_ToggleBits(GPIOD, GPIO_Pin_12);
 
 			TIM_Cmd(TIM3, DISABLE);
 			TIM3->CNT = 0;
 		}
-
+*/
 		if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_7)){
 
+			Otworz_plik(&fresult, &plik_wav,"7.wav");
+
 			GPIO_ToggleBits(GPIOD, GPIO_Pin_12);
 
 			TIM_Cmd(TIM3, DISABLE);
 			TIM3->CNT = 0;
 		}
-
+		/*
 		if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_8)){
+
+			Otworz_plik(&fresult, &plik_wav,"8.wav");
 
 			GPIO_ToggleBits(GPIOD, GPIO_Pin_12);
 
@@ -201,7 +227,7 @@ void TIM3_IRQHandler ( void ){
 			TIM_Cmd(TIM3, DISABLE);
 			TIM3->CNT = 0;
 		}
-
+*/
 		TIM_ClearITPendingBit(TIM3, TIM_IT_Update);
 		EXTI_ClearITPendingBit(EXTI_Line1);
 		EXTI_ClearITPendingBit(EXTI_Line2);
