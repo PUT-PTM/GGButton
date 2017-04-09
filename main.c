@@ -6,6 +6,7 @@
 #include "stm32f4xx_syscfg.h"
 #include "misc.h"
 #include "stm32f4xx_spi.h"
+#include "stm32f4xx_dma.h"
 
 #include "ff.h"
 #include "diskio.h"
@@ -15,11 +16,14 @@
 #include "przyciski.h"
 #include "debouncer.h"
 #include "karta_SD.h"
+#include "DMA.h"
 
 FRESULT fresult;
 FIL plik_wav;
 WORD zapisanych_bajtow;
 FATFS fatfs;
+
+u16 DMA_buffer[2048];
 
 int main(void)
 {
@@ -40,6 +44,10 @@ int main(void)
 	Konfiguracja_przyciskow();
 	Konfiguracja_debouncera();
 	Inicjalizacja_karty_SD(&fresult, &fatfs);
+	codec_init();
+	codec_ctrl_init();
+	I2S_Cmd(CODEC_I2S, ENABLE);
+	Konfiguracja_DMA(DMA_buffer);
 
 
 
@@ -78,7 +86,7 @@ int main(void)
 
 
 
-		//
+
 
 
 
