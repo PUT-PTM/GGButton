@@ -21,12 +21,17 @@
 
 FRESULT fresult;
 FIL plik_wav;
-WORD zapisanych_bajtow;
+UINT licznik;
 FATFS fatfs;
+
+
+WORD zapisanych_bajtow; // <-----X
 
 u16 DMA_buffer[2048];
 
 int wartosc_ADC;
+
+const TCHAR *obecny_utwor = "1.wav";
 
 int main(void)
 {
@@ -146,7 +151,7 @@ void TIM3_IRQHandler ( void ){
 
 		if(GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_1)){
 
-			Otworz_plik(&fresult, &plik_wav, "1.wav");
+			obecny_utwor = "test.wav";
 
 			GPIO_ToggleBits(GPIOD, GPIO_Pin_12);
 
@@ -156,7 +161,7 @@ void TIM3_IRQHandler ( void ){
 /*
 		if(GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_2)){
 
-			Otworz_plik(&fresult, &plik_wav,"2.wav");
+			obecny_utwor = "2.wav";
 
 			GPIO_ToggleBits(GPIOD, GPIO_Pin_12);
 
@@ -166,7 +171,7 @@ void TIM3_IRQHandler ( void ){
 *//*
 		if(GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_3)){
 
-			Otworz_plik(&fresult, &plik_wav,"3.wav");
+			obecny_utwor = "3.wav";
 
 			GPIO_ToggleBits(GPIOD, GPIO_Pin_12);
 
@@ -176,7 +181,7 @@ void TIM3_IRQHandler ( void ){
 
 		if(GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_4)){
 
-			Otworz_plik(&fresult, &plik_wav,"4.wav");
+			obecny_utwor = "4.wav";
 
 			GPIO_ToggleBits(GPIOD, GPIO_Pin_12);
 
@@ -186,7 +191,7 @@ void TIM3_IRQHandler ( void ){
 
 		if(GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_5)){
 
-			Otworz_plik(&fresult, &plik_wav,"5.wav");
+			obecny_utwor = "5.wav";
 
 			GPIO_ToggleBits(GPIOD, GPIO_Pin_12);
 
@@ -196,7 +201,7 @@ void TIM3_IRQHandler ( void ){
 
 		if(GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_6)){
 
-			Otworz_plik(&fresult, &plik_wav,"6.wav");
+			obecny_utwor = "6.wav";
 
 			GPIO_ToggleBits(GPIOD, GPIO_Pin_12);
 
@@ -206,7 +211,7 @@ void TIM3_IRQHandler ( void ){
 *//*
 		if(GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_7)){
 
-			Otworz_plik(&fresult, &plik_wav,"7.wav");
+			obecny_utwor = "7.wav";
 
 			GPIO_ToggleBits(GPIOD, GPIO_Pin_12);
 
@@ -216,15 +221,7 @@ void TIM3_IRQHandler ( void ){
 		*//*
 		if(GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_8)){
 
-			Otworz_plik(&fresult, &plik_wav,"8.wav");
-
-			GPIO_ToggleBits(GPIOD, GPIO_Pin_12);
-
-			TIM_Cmd(TIM3, DISABLE);
-			TIM3->CNT = 0;
-		}
-
-		if(GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_9)){
+			obecny_utwor = "8.wav";
 
 			GPIO_ToggleBits(GPIOD, GPIO_Pin_12);
 
@@ -232,6 +229,16 @@ void TIM3_IRQHandler ( void ){
 			TIM3->CNT = 0;
 		}
 */
+		if(GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_9)){
+
+			Odtwarzaj_utwor(&fresult, &plik_wav, licznik, obecny_utwor, DMA_buffer);
+
+			GPIO_ToggleBits(GPIOD, GPIO_Pin_12);
+
+			TIM_Cmd(TIM3, DISABLE);
+			TIM3->CNT = 0;
+		}
+
 		TIM_ClearITPendingBit(TIM3, TIM_IT_Update);
 		EXTI_ClearITPendingBit(EXTI_Line1);
 		EXTI_ClearITPendingBit(EXTI_Line2);
@@ -249,9 +256,9 @@ void TIM2_IRQHandler(void)
 {
     if(TIM_GetITStatus(TIM2, TIM_IT_Update) != RESET)
     {
-        wartosc_ADC = Odczyt_wartosci_ADC();
-        Codec_VolumeCtrl(wartosc_ADC);
-        TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
+        //wartosc_ADC = Odczyt_wartosci_ADC();
+       // Codec_VolumeCtrl(wartosc_ADC);
+        //TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
     }
 }
 

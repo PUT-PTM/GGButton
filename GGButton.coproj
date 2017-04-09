@@ -120,6 +120,7 @@
     <File name="cmsis_lib/include/stm32f4xx_exti.h" path="cmsis_lib/include/stm32f4xx_exti.h" type="1"/>
     <File name="cmsis_lib/source/stm32f4xx_exti.c" path="cmsis_lib/source/stm32f4xx_exti.c" type="1"/>
     <File name="cmsis_boot/system_stm32f4xx.c" path="cmsis_boot/system_stm32f4xx.c" type="1"/>
+    <File name="ADC.h" path="ADC.h" type="1"/>
     <File name="SPI.c" path="SPI.c" type="1"/>
     <File name="cmsis_lib/include/stm32f4xx_spi.h" path="cmsis_lib/include/stm32f4xx_spi.h" type="1"/>
     <File name="diskio.h" path="diskio.h" type="1"/>
@@ -132,6 +133,7 @@
     <File name="cmsis_lib/include/stm32f4xx_gpio.h" path="cmsis_lib/include/stm32f4xx_gpio.h" type="1"/>
     <File name="przyciski.h" path="przyciski.h" type="1"/>
     <File name="cmsis_lib/include/misc.h" path="cmsis_lib/include/misc.h" type="1"/>
+    <File name="ADC.c" path="ADC.c" type="1"/>
     <File name="cmsis_lib/include" path="" type="2"/>
     <File name="codec.c" path="codec.c" type="1"/>
     <File name="karta_SD.c" path="karta_SD.c" type="1"/>

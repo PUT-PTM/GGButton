@@ -14,7 +14,6 @@
 #define SD
 
 void Inicjalizacja_karty_SD(FRESULT *fresult, FATFS *fatfs);
-void Otworz_plik(FRESULT *fresult, FIL *plik_wav, const TCHAR *sciezka);
-
+void Odtwarzaj_utwor(FRESULT *fresult, FIL *plik_wav, UINT licznik, const TCHAR *sciezka, u16 DMA_buffer[]);
 
 #endif
