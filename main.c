@@ -149,7 +149,7 @@ void TIM3_IRQHandler ( void ){
 			TIM_Cmd(TIM3, DISABLE);
 			TIM3->CNT = 0;
 		}
-
+/*
 		if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_2)){
 
 			Otworz_plik(&fresult, &plik_wav,"2.wav");
@@ -159,7 +159,7 @@ void TIM3_IRQHandler ( void ){
 			TIM_Cmd(TIM3, DISABLE);
 			TIM3->CNT = 0;
 		}
-/*
+*//*
 		if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_3)){
 
 			Otworz_plik(&fresult, &plik_wav,"3.wav");
@@ -199,7 +199,7 @@ void TIM3_IRQHandler ( void ){
 			TIM_Cmd(TIM3, DISABLE);
 			TIM3->CNT = 0;
 		}
-*/
+*//*
 		if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_7)){
 
 			Otworz_plik(&fresult, &plik_wav,"7.wav");
@@ -209,7 +209,7 @@ void TIM3_IRQHandler ( void ){
 			TIM_Cmd(TIM3, DISABLE);
 			TIM3->CNT = 0;
 		}
-		/*
+		*//*
 		if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_8)){
 
 			Otworz_plik(&fresult, &plik_wav,"8.wav");
