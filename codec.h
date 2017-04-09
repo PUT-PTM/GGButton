@@ -80,6 +80,7 @@ void codec_init();
 void codec_ctrl_init();
 void send_codec_ctrl(uint8_t controlBytes[], uint8_t numBytes);
 uint8_t read_codec_register(uint8_t mapByte);
+void Codec_VolumeCtrl(uint8_t Volume);
 
 
 

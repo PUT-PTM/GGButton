@@ -256,9 +256,9 @@ void TIM2_IRQHandler(void)
 {
     if(TIM_GetITStatus(TIM2, TIM_IT_Update) != RESET)
     {
-        //wartosc_ADC = Odczyt_wartosci_ADC();
-       // Codec_VolumeCtrl(wartosc_ADC);
-        //TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
+    	wartosc_ADC = Odczyt_wartosci_ADC();
+        Codec_VolumeCtrl(wartosc_ADC);
+        TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
     }
 }
 

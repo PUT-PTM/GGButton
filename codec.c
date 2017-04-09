@@ -268,3 +268,20 @@ uint8_t read_codec_register(uint8_t mapbyte)
 
 	return receivedByte;
 }
+
+void Codec_VolumeCtrl(uint8_t Volume)
+{
+
+  if (Volume > 0xE6)
+  {
+    /* Set the Master volume */
+    Codec_WriteRegister(0x20, Volume - 0xE7);
+    Codec_WriteRegister(0x21, Volume - 0xE7);
+  }
+  else
+  {
+    /* Set the Master volume */
+    Codec_WriteRegister(0x20, Volume + 0x19);
+    Codec_WriteRegister(0x21, Volume + 0x19);
+  }
+}
