@@ -24,6 +24,7 @@
 ##Attributions
 
 - https://github.com/PUT-PTM/STMwavPlayerMR
+- https://github.com/PUT-PTM/STMwavPlayer
 - http://elm-chan.org/fsw/ff/00index_e.html
 - http://stm32.eu/2012/05/09/obsluga-fat-w-mikrokontrolerach-stm32-obsluga-kart/
 

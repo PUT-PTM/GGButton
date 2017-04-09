@@ -6,6 +6,7 @@
 #include "stm32f4xx_syscfg.h"
 #include "misc.h"
 #include "stm32f4xx_spi.h"
+#include "stm32f4xx_dma.h"
 
 #include "ff.h"
 #include "diskio.h"

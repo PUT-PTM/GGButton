@@ -21,7 +21,7 @@
 
 FRESULT fresult;
 FIL plik_wav;
-UINT licznik;
+UINT cnt;
 FATFS fatfs;
 
 
@@ -49,6 +49,7 @@ int main(void)
 	codec_ctrl_init();
 	I2S_Cmd(CODEC_I2S, ENABLE);
 	Konfiguracja_DMA(DMA_buffer);
+	Konfiguracja_ADC();
 
 
 
@@ -151,7 +152,7 @@ void TIM3_IRQHandler ( void ){
 
 		if(GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_1)){
 
-			obecny_utwor = "test.wav";
+			obecny_utwor = "2.wav";
 
 			GPIO_ToggleBits(GPIOD, GPIO_Pin_12);
 
@@ -231,7 +232,40 @@ void TIM3_IRQHandler ( void ){
 */
 		if(GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_9)){
 
-			Odtwarzaj_utwor(&fresult, &plik_wav, licznik, obecny_utwor, DMA_buffer);
+			fresult = f_open(&plik_wav, obecny_utwor, FA_READ); //FA_CREATE_ALWAYS
+
+			//--- wczytanie pierwszych 44 bajtow naglowka wav + jednej probki 2b
+
+			f_lseek(&plik_wav,44);
+			f_read(&plik_wav, &DMA_buffer[0], 2048, &cnt);
+
+			//--- pobieranie bufora
+
+			 volatile ITStatus it_st; // sprawdzenie flagi DMA
+
+			    while(1)
+			    {
+			        it_st = RESET;
+			        while(it_st == RESET)
+			        {
+			            it_st = DMA_GetFlagStatus(DMA1_Stream5, DMA_FLAG_HTIF5); // pobieramy flage DMA HTIF ze streamu 5 (w polowie)
+			        }
+			        f_read(&plik_wav, &DMA_buffer[0], 2048, &cnt); // czytaj kolejna probke (2B)
+			        DMA_ClearFlag(DMA1_Stream5, DMA_FLAG_HTIF5); //
+			        if(cnt<1024)break; // jezeli koniec utworu to wyjdz
+
+			        it_st = RESET;
+			        while(it_st == RESET)
+			        {
+			             it_st = DMA_GetFlagStatus(DMA1_Stream5, DMA_FLAG_TCIF5);
+			        }
+			        f_read (&plik_wav,&DMA_buffer[1024],2048,&cnt);
+			        DMA_ClearFlag(DMA1_Stream5, DMA_FLAG_TCIF5 );
+			        if(cnt<1024)break; // jezeli koniec utworu lub wcisnieto przycisk to wyjdz i zmien utwor
+			    }
+
+
+			fresult = f_close(&plik_wav);
 
 			GPIO_ToggleBits(GPIOD, GPIO_Pin_12);
 

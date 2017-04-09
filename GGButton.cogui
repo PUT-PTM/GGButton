@@ -2,7 +2,16 @@
 <workbench version="2.0">
 <workbenchAdvisor/>
 <window>
-<fastViewData fastViewLocation="1024"/>
+<fastViewData fastViewLocation="1024">
+<orientation position="512" view="org.eclipse.debug.ui.ExpressionView"/>
+<orientation position="512" view="org.coocox.builder.ui.views.ProjectView"/>
+<orientation position="512" view="org.coocox.component.ui.ComponentView"/>
+<orientation position="512" view="org.coocox.codebugger.trace.ui.traceview"/>
+<orientation position="512" view="org.eclipse.debug.ui.DebugView"/>
+<orientation position="512" view="org.eclipse.ui.console.ConsoleView"/>
+<orientation position="512" view="org.eclipse.debug.ui.VariableView"/>
+<orientation position="512" view="org.coocox.component.ui.Help"/>
+</fastViewData>
 <perspectiveBar/>
 <page focus="true" label="Workspace - CooCox CoBuilder">
 <editors>
@@ -38,12 +47,13 @@
 </input>
 </editor>
 <editor id="org.coocox.builder.ui.editors.repository.RepositoryBrowser" name="Repository" partName="Repository" title="Repository" tooltip="Repository" workbook="DefaultEditorWorkbook">
-<input factoryID="org.coocox.component.ui.editors.repository.RepositoryElementFactory">&#x0A;<subPage horizontalPosition="0" selectedItemId="514" subPageIndex="2" verticalPosition="221"/>
+<input factoryID="org.coocox.component.ui.editors.repository.RepositoryElementFactory">
+<subPage horizontalPosition="0" selectedItemId="0" subPageIndex="2" verticalPosition="0"/>
 </input>
 </editor>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="C:/Users/Gaca1111/Desktop/GGButton/GGButton/main.c" title="main.c" tooltip="C:/Users/Gaca1111/Desktop/GGButton/GGButton/main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GGButton/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4627" selectionTopPixel="4708"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3893" selectionTopPixel="4378"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="SPI.c" partName="SPI.c" path="C:/Users/Gaca1111/Desktop/GGButton/SPI.c" title="SPI.c" tooltip="C:/Users/Gaca1111/Desktop/GGButton/SPI.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GGButton/SPI.c"/>
@@ -59,11 +69,11 @@
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="codec.c" partName="codec.c" path="C:/Users/Gaca1111/Desktop/GGButton/GGButton/codec.c" title="codec.c" tooltip="C:/Users/Gaca1111/Desktop/GGButton/GGButton/codec.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GGButton/codec.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="4828"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="11185" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="codec.h" partName="codec.h" path="C:/Users/Gaca1111/Desktop/GGButton/GGButton/codec.h" title="codec.h" tooltip="C:/Users/Gaca1111/Desktop/GGButton/GGButton/codec.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GGButton/codec.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="42" selectionOffset="362" selectionTopPixel="270"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2755" selectionTopPixel="180"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="DMA.c" partName="DMA.c" path="C:/Users/Gaca1111/Desktop/GGButton/GGButton/DMA.c" title="DMA.c" tooltip="C:/Users/Gaca1111/Desktop/GGButton/GGButton/DMA.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GGButton/DMA.c"/>
@@ -83,7 +93,7 @@
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="karta_SD.c" partName="karta_SD.c" path="C:/Users/Gaca1111/Desktop/GGButton/GGButton/karta_SD.c" title="karta_SD.c" tooltip="C:/Users/Gaca1111/Desktop/GGButton/GGButton/karta_SD.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GGButton/karta_SD.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="496" selectionTopPixel="8"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="581" selectionTopPixel="428"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="ADC.c" partName="ADC.c" path="C:/Users/Gaca1111/Desktop/GGButton/GGButton/ADC.c" title="ADC.c" tooltip="C:/Users/Gaca1111/Desktop/GGButton/GGButton/ADC.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GGButton/ADC.c"/>
@@ -95,7 +105,7 @@
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="karta_SD.h" partName="karta_SD.h" path="C:/Users/Gaca1111/Desktop/GGButton/GGButton/karta_SD.h" title="karta_SD.h" tooltip="C:/Users/Gaca1111/Desktop/GGButton/GGButton/karta_SD.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GGButton/karta_SD.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="461" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="247" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="przyciski.h" partName="przyciski.h" path="C:/Users/Gaca1111/Desktop/GGButton/GGButton/przyciski.h" title="przyciski.h" tooltip="C:/Users/Gaca1111/Desktop/GGButton/GGButton/przyciski.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GGButton/przyciski.h"/>
@@ -112,7 +122,7 @@
 </editors>
 <views>
 <view id="org.coocox.builder.ui.views.ProjectView" partName="Project">
-<viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="29">
+<viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="32">
 <expanded>
 <element path="/GGButton"/>
 <element path="/GGButton/cmsis"/>
@@ -225,87 +235,25 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GGButton/main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GGButton/ADC.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GGButton/ADC.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GGButton/DMA.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GGButton/karta_SD.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GGButton/karta_SD.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GGButton/DMA.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GGButton/codec.c"/>
+<editor factoryID="org.coocox.component.ui.editors.repository.RepositoryElementFactory" id="org.coocox.builder.ui.editors.repository.RepositoryBrowser">
+<subPage horizontalPosition="0" selectedItemId="0" subPageIndex="2" verticalPosition="0"/>
+</editor>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GGButton/codec.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GGButton/codec.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GGButton/karta_SD.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GGButton/karta_SD.h"/>
 </editors>
-<item historyLabel="ADC.h" index="2">
-<position info="not_deleted" x="545" y="0"/>
-</item>
-<item historyLabel="ADC.c" index="1">
-<position info="not_deleted" x="2253" y="0"/>
-</item>
-<item historyLabel="ADC.c" index="1">
-<position info="not_deleted" x="2389" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="633" y="0"/>
-</item>
-<item historyLabel="ADC.c" index="1">
-<position info="not_deleted" x="2391" y="25"/>
-</item>
-<item historyLabel="ADC.h" index="2">
-<position info="not_deleted" x="533" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="4502" y="0"/>
-</item>
-<item historyLabel="DMA.h" index="3">
-<position info="not_deleted" x="381" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="4502" y="0"/>
-</item>
-<item historyLabel="karta_SD.c" index="5">
-<position/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="633" y="0"/>
-</item>
-<item historyLabel="karta_SD.c" index="5">
-<position/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="3733" y="0"/>
-</item>
-<item historyLabel="karta_SD.c" index="5">
-<position/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="3733" y="0"/>
-</item>
-<item historyLabel="karta_SD.c" index="5">
-<position/>
-</item>
 <item historyLabel="main.c" index="0">
 <position info="not_deleted" x="481" y="12"/>
 </item>
-<item historyLabel="karta_SD.c" index="5">
-<position info="not_deleted" x="289" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="481" y="12"/>
-</item>
-<item historyLabel="karta_SD.c" index="5">
-<position/>
-</item>
-<item historyLabel="karta_SD.h" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="karta_SD.c" index="5">
-<position info="not_deleted" x="534" y="0"/>
-</item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="481" y="12"/>
-</item>
-<item historyLabel="DMA.c" index="6">
+<item historyLabel="DMA.c" index="3">
 <position info="not_deleted" x="42" y="16"/>
 </item>
-<item historyLabel="karta_SD.c" index="5">
+<item historyLabel="karta_SD.c" index="2">
 <position/>
 </item>
 <item historyLabel="main.c" index="0">
@@ -314,31 +262,31 @@
 <item historyLabel="main.c" index="0">
 <position info="not_deleted" x="4270" y="0"/>
 </item>
-<item historyLabel="karta_SD.c" index="5">
+<item historyLabel="karta_SD.c" index="2">
 <position/>
 </item>
 <item historyLabel="main.c" index="0">
 <position info="not_deleted" x="550" y="0"/>
 </item>
-<item historyLabel="karta_SD.c" index="5">
+<item historyLabel="karta_SD.c" index="2">
 <position info="not_deleted" x="545" y="0"/>
 </item>
-<item historyLabel="karta_SD.h" index="4">
+<item historyLabel="karta_SD.h" index="1">
 <position info="not_deleted" x="461" y="0"/>
 </item>
-<item historyLabel="karta_SD.c" index="5">
+<item historyLabel="karta_SD.c" index="2">
 <position info="not_deleted" x="545" y="0"/>
 </item>
-<item historyLabel="karta_SD.h" index="4">
+<item historyLabel="karta_SD.h" index="1">
 <position info="not_deleted" x="461" y="0"/>
 </item>
-<item historyLabel="karta_SD.c" index="5">
+<item historyLabel="karta_SD.c" index="2">
 <position info="not_deleted" x="155" y="107"/>
 </item>
-<item historyLabel="karta_SD.h" index="4">
+<item historyLabel="karta_SD.h" index="1">
 <position info="not_deleted" x="459" y="0"/>
 </item>
-<item historyLabel="karta_SD.c" index="5">
+<item historyLabel="karta_SD.c" index="2">
 <position/>
 </item>
 <item historyLabel="main.c" index="0">
@@ -350,38 +298,102 @@
 <item historyLabel="main.c" index="0">
 <position info="not_deleted" x="4624" y="0"/>
 </item>
-<item historyLabel="codec.c" index="7">
+<item historyLabel="codec.c" index="4">
 <position info="not_deleted" x="0" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
 <position info="not_deleted" x="3954" y="0"/>
 </item>
-<item historyLabel="karta_SD.c" index="5">
+<item historyLabel="karta_SD.c" index="2">
 <position info="not_deleted" x="550" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
 <position info="not_deleted" x="4114" y="0"/>
 </item>
-<item historyLabel="karta_SD.h" index="4">
+<item historyLabel="karta_SD.h" index="1">
 <position info="not_deleted" x="459" y="0"/>
 </item>
-<item historyLabel="karta_SD.c" index="5">
+<item historyLabel="karta_SD.c" index="2">
 <position info="not_deleted" x="545" y="0"/>
 </item>
-<item historyLabel="karta_SD.h" index="4">
+<item historyLabel="karta_SD.h" index="1">
 <position info="not_deleted" x="461" y="0"/>
 </item>
-<item historyLabel="karta_SD.c" index="5">
+<item historyLabel="karta_SD.c" index="2">
 <position info="not_deleted" x="496" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
 <position info="not_deleted" x="2305" y="0"/>
 </item>
-<item historyLabel="karta_SD.c" index="5">
+<item historyLabel="karta_SD.c" index="2">
 <position info="not_deleted" x="496" y="0"/>
 </item>
-<item active="true" historyLabel="main.c" index="0">
+<item historyLabel="main.c" index="0">
 <position info="not_deleted" x="2305" y="0"/>
+</item>
+<item historyLabel="Repository" index="5"/>
+<item historyLabel="codec.c" index="6">
+<position info="not_deleted" x="11187" y="0"/>
+</item>
+<item historyLabel="codec.h" index="7">
+<position/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="4626" y="0"/>
+</item>
+<item historyLabel="karta_SD.c" index="8">
+<position info="not_deleted" x="1395" y="0"/>
+</item>
+<item historyLabel="karta_SD.c" index="8">
+<position info="not_deleted" x="1429" y="0"/>
+</item>
+<item historyLabel="karta_SD.c" index="8">
+<position info="not_deleted" x="1084" y="71"/>
+</item>
+<item historyLabel="karta_SD.c" index="8">
+<position info="not_deleted" x="1285" y="103"/>
+</item>
+<item historyLabel="karta_SD.h" index="9">
+<position info="not_deleted" x="489" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="221" y="26"/>
+</item>
+<item historyLabel="karta_SD.h" index="9">
+<position info="not_deleted" x="247" y="0"/>
+</item>
+<item historyLabel="karta_SD.c" index="8">
+<position info="not_deleted" x="819" y="0"/>
+</item>
+<item historyLabel="karta_SD.c" index="8">
+<position info="not_deleted" x="1308" y="0"/>
+</item>
+<item historyLabel="codec.c" index="6">
+<position/>
+</item>
+<item historyLabel="codec.c" index="6">
+<position/>
+</item>
+<item historyLabel="codec.c" index="6">
+<position info="not_deleted" x="10484" y="0"/>
+</item>
+<item historyLabel="codec.c" index="6">
+<position info="not_deleted" x="9916" y="0"/>
+</item>
+<item historyLabel="codec.c" index="6">
+<position info="not_deleted" x="11185" y="0"/>
+</item>
+<item historyLabel="codec.h" index="7">
+<position info="not_deleted" x="2755" y="0"/>
+</item>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="2468" y="0"/>
+</item>
+<item historyLabel="karta_SD.c" index="8">
+<position info="not_deleted" x="581" y="0"/>
+</item>
+<item active="true" historyLabel="main.c" index="0">
+<position info="not_deleted" x="2468" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>

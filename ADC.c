@@ -88,5 +88,6 @@ int Odczyt_wartosci_ADC(){
 
     ADC_SoftwareStartConv(ADC1);
     while(ADC_GetFlagStatus(ADC1, ADC_FLAG_EOC) == RESET);
-    return((ADC_GetConversionValue(ADC1))/16);
+    int dupa = ((ADC_GetConversionValue(ADC1))/16);
+    return dupa;
 }
