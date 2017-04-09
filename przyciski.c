@@ -11,7 +11,7 @@ void Konfiguracja_pinow_wejsciowych(){
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
 	GPIO_InitTypeDef piny;
 
-	piny.GPIO_Pin = GPIO_Pin_1 | GPIO_Pin_2 | GPIO_Pin_3 | GPIO_Pin_4 | GPIO_Pin_5 | GPIO_Pin_6 | GPIO_Pin_7 | GPIO_Pin_8 | GPIO_Pin_9;
+	piny.GPIO_Pin = GPIO_Pin_1 | GPIO_Pin_2 | GPIO_Pin_3 | GPIO_Pin_5 | GPIO_Pin_6 | GPIO_Pin_7 | GPIO_Pin_8 | GPIO_Pin_9 | GPIO_Pin_10;
 	piny.GPIO_Mode = GPIO_Mode_IN;
 	piny.GPIO_OType = GPIO_OType_PP;
 	piny.GPIO_Speed = GPIO_Speed_100MHz;
@@ -65,16 +65,6 @@ void Konfiguracja_przerwan_wejsciowych(){
 
 	//---
 
-	przerwanie.NVIC_IRQChannel = EXTI4_IRQn;
-	NVIC_Init(&przerwanie);
-
-	linia_przerwania.EXTI_Line = EXTI_Line4;
-	EXTI_Init(&linia_przerwania);
-
-	SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOA, EXTI_PinSource4);
-
-	//---
-
 	przerwanie.NVIC_IRQChannel = EXTI9_5_IRQn;
 	NVIC_Init(&przerwanie);
 
@@ -86,4 +76,14 @@ void Konfiguracja_przerwan_wejsciowych(){
 	SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOA, EXTI_PinSource7);
 	SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOA, EXTI_PinSource8);
 	SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOA, EXTI_PinSource9);
+
+	//---
+
+	przerwanie.NVIC_IRQChannel = EXTI15_10_IRQn;
+	NVIC_Init(&przerwanie);
+
+	linia_przerwania.EXTI_Line = EXTI_Line10;
+	EXTI_Init(&linia_przerwania);
+
+	SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOA, EXTI_PinSource10);
 }
