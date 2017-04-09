@@ -7,6 +7,7 @@
 #include "misc.h"
 #include "stm32f4xx_spi.h"
 #include "stm32f4xx_dma.h"
+#include "stm32f4xx_adc.h"
 
 #include "ff.h"
 #include "diskio.h"
@@ -25,17 +26,12 @@ FATFS fatfs;
 
 u16 DMA_buffer[2048];
 
+int wartosc_ADC;
+
 int main(void)
 {
-
-
-
-
-
-
-
 	SystemInit();
-	//RCC_APB2PeriphClockCmd(RCC_APB2Periph_SYSCFG, ENABLE);
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_SYSCFG, ENABLE);
 
 
 
@@ -81,7 +77,6 @@ int main(void)
 	  	diody.GPIO_Speed = GPIO_Speed_100MHz;
 	  	diody.GPIO_PuPd = GPIO_PuPd_NOPULL;
 	  	GPIO_Init(GPIOD, &diody);
-
 
 
 
@@ -149,7 +144,7 @@ void TIM3_IRQHandler ( void ){
 
 	if (TIM_GetITStatus(TIM3, TIM_IT_Update) != RESET){
 
-		if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_1)){
+		if(GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_1)){
 
 			Otworz_plik(&fresult, &plik_wav, "1.wav");
 
@@ -159,7 +154,7 @@ void TIM3_IRQHandler ( void ){
 			TIM3->CNT = 0;
 		}
 /*
-		if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_2)){
+		if(GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_2)){
 
 			Otworz_plik(&fresult, &plik_wav,"2.wav");
 
@@ -169,7 +164,7 @@ void TIM3_IRQHandler ( void ){
 			TIM3->CNT = 0;
 		}
 *//*
-		if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_3)){
+		if(GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_3)){
 
 			Otworz_plik(&fresult, &plik_wav,"3.wav");
 
@@ -179,7 +174,7 @@ void TIM3_IRQHandler ( void ){
 			TIM3->CNT = 0;
 		}
 
-		if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_10)){
+		if(GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_4)){
 
 			Otworz_plik(&fresult, &plik_wav,"4.wav");
 
@@ -189,7 +184,7 @@ void TIM3_IRQHandler ( void ){
 			TIM3->CNT = 0;
 		}
 
-		if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_5)){
+		if(GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_5)){
 
 			Otworz_plik(&fresult, &plik_wav,"5.wav");
 
@@ -199,7 +194,7 @@ void TIM3_IRQHandler ( void ){
 			TIM3->CNT = 0;
 		}
 
-		if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_6)){
+		if(GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_6)){
 
 			Otworz_plik(&fresult, &plik_wav,"6.wav");
 
@@ -209,7 +204,7 @@ void TIM3_IRQHandler ( void ){
 			TIM3->CNT = 0;
 		}
 *//*
-		if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_7)){
+		if(GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_7)){
 
 			Otworz_plik(&fresult, &plik_wav,"7.wav");
 
@@ -219,7 +214,7 @@ void TIM3_IRQHandler ( void ){
 			TIM3->CNT = 0;
 		}
 		*//*
-		if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_8)){
+		if(GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_8)){
 
 			Otworz_plik(&fresult, &plik_wav,"8.wav");
 
@@ -229,7 +224,7 @@ void TIM3_IRQHandler ( void ){
 			TIM3->CNT = 0;
 		}
 
-		if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_9)){
+		if(GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_9)){
 
 			GPIO_ToggleBits(GPIOD, GPIO_Pin_12);
 
@@ -241,12 +236,22 @@ void TIM3_IRQHandler ( void ){
 		EXTI_ClearITPendingBit(EXTI_Line1);
 		EXTI_ClearITPendingBit(EXTI_Line2);
 		EXTI_ClearITPendingBit(EXTI_Line3);
+		EXTI_ClearITPendingBit(EXTI_Line4);
 		EXTI_ClearITPendingBit(EXTI_Line5);
 		EXTI_ClearITPendingBit(EXTI_Line6);
 		EXTI_ClearITPendingBit(EXTI_Line7);
 		EXTI_ClearITPendingBit(EXTI_Line8);
 		EXTI_ClearITPendingBit(EXTI_Line9);
-		EXTI_ClearITPendingBit(EXTI_Line10);
 	}
+}
+
+void TIM2_IRQHandler(void)
+{
+    if(TIM_GetITStatus(TIM2, TIM_IT_Update) != RESET)
+    {
+        wartosc_ADC = Odczyt_wartosci_ADC();
+        Codec_VolumeCtrl(wartosc_ADC);
+        TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
+    }
 }
 

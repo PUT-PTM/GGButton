@@ -9,11 +9,15 @@
 #include "stm32f4xx_dma.h"
 #include "stm32f4xx_adc.h"
 
-#include "codec.h"
+#ifndef adc
+#define adc
 
-#ifndef dma
-#define dma
-
-void Konfiguracja_DMA(u16 DMA_buffer[]);
+void Konfiguracja_ADC();
+void Konfiguracja_pinu_ADC();
+void Konfiguracja_struktury_ADC();
+void Konfiguracja_timera_ADC();
+void Konfiguracja_przerwania_timera_ADC();
+void Aktywacja_timera_ADC();
+int Odczyt_wartosci_ADC();
 
 #endif

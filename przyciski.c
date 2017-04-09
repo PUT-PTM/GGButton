@@ -8,15 +8,15 @@ void Konfiguracja_przyciskow(){
 
 void Konfiguracja_pinow_wejsciowych(){
 
-	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOE, ENABLE);
 	GPIO_InitTypeDef piny;
 
-	piny.GPIO_Pin = GPIO_Pin_1 | GPIO_Pin_2 | GPIO_Pin_3 | GPIO_Pin_5 | GPIO_Pin_6 | GPIO_Pin_7 | GPIO_Pin_8 | GPIO_Pin_9 | GPIO_Pin_10;
+	piny.GPIO_Pin = GPIO_Pin_1| GPIO_Pin_2 | GPIO_Pin_3 | GPIO_Pin_4 | GPIO_Pin_5 | GPIO_Pin_6 | GPIO_Pin_7 | GPIO_Pin_8 | GPIO_Pin_9;
 	piny.GPIO_Mode = GPIO_Mode_IN;
 	piny.GPIO_OType = GPIO_OType_PP;
 	piny.GPIO_Speed = GPIO_Speed_100MHz;
 	piny.GPIO_PuPd = GPIO_PuPd_DOWN;
-	GPIO_Init(GPIOA, &piny);
+	GPIO_Init(GPIOE, &piny);
 }
 
 void Konfiguracja_przerwan_wejsciowych(){
@@ -41,7 +41,8 @@ void Konfiguracja_przerwan_wejsciowych(){
 	linia_przerwania.EXTI_Line = EXTI_Line1;
 	EXTI_Init(&linia_przerwania);
 
-	SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOA, EXTI_PinSource1);
+	SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOE, EXTI_PinSource1);
+
 
 	//---
 
@@ -51,7 +52,7 @@ void Konfiguracja_przerwan_wejsciowych(){
 	linia_przerwania.EXTI_Line = EXTI_Line2;
 	EXTI_Init(&linia_przerwania);
 
-	SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOA, EXTI_PinSource2);
+	SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOE, EXTI_PinSource2);
 
 	//---
 
@@ -61,7 +62,17 @@ void Konfiguracja_przerwan_wejsciowych(){
 	linia_przerwania.EXTI_Line = EXTI_Line3;
 	EXTI_Init(&linia_przerwania);
 
-	SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOA, EXTI_PinSource3);
+	SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOE, EXTI_PinSource3);
+
+	//---
+
+	przerwanie.NVIC_IRQChannel = EXTI4_IRQn;
+	NVIC_Init(&przerwanie);
+
+	linia_przerwania.EXTI_Line = EXTI_Line4;
+	EXTI_Init(&linia_przerwania);
+
+	SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOE, EXTI_PinSource4);
 
 	//---
 
@@ -71,19 +82,9 @@ void Konfiguracja_przerwan_wejsciowych(){
 	linia_przerwania.EXTI_Line = EXTI_Line5 | EXTI_Line6 | EXTI_Line7 | EXTI_Line8 | EXTI_Line9  ;
 	EXTI_Init(&linia_przerwania);
 
-	SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOA, EXTI_PinSource5);
-	SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOA, EXTI_PinSource6);
-	SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOA, EXTI_PinSource7);
-	SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOA, EXTI_PinSource8);
-	SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOA, EXTI_PinSource9);
-
-	//---
-
-	przerwanie.NVIC_IRQChannel = EXTI15_10_IRQn;
-	NVIC_Init(&przerwanie);
-
-	linia_przerwania.EXTI_Line = EXTI_Line10;
-	EXTI_Init(&linia_przerwania);
-
-	SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOA, EXTI_PinSource10);
+	SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOE, EXTI_PinSource5);
+	SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOE, EXTI_PinSource6);
+	SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOE, EXTI_PinSource7);
+	SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOE, EXTI_PinSource8);
+	SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOE, EXTI_PinSource9);
 }
