@@ -34,7 +34,7 @@ volatile u8 error_state=0;
 const char* utwory[9] = {"0.WAV","1.WAV","2.WAV","3.WAV","4.WAV","5.WAV","6.WAV","7.WAV","8.WAV"};
 int obecny_utwor = 0;
 int graj = 0;
-int dupa = 0;
+int posladki = 0;
 int lel = 0;
 
 
@@ -310,43 +310,45 @@ void TIM2_ADC_init()
 }
 void ADC_init()
 {
-	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA , ENABLE);// zegar dla portu GPIO z ktorego wykorzystany zostanie pin
-	// jako wejscie ADC (PA1)
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_ADC1, ENABLE);// zegar dla modulu ADC1
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA , ENABLE);
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_ADC1, ENABLE);
 
-	// inicjalizacja wejscia ADC
+	//---
+
 	GPIO_InitTypeDef  GPIO_InitStructureADC;
+
 	GPIO_InitStructureADC.GPIO_Pin = GPIO_Pin_1;
 	GPIO_InitStructureADC.GPIO_Mode = GPIO_Mode_AN;
 	GPIO_InitStructureADC.GPIO_PuPd = GPIO_PuPd_NOPULL;
 	GPIO_Init(GPIOA, &GPIO_InitStructureADC);
 
-	ADC_CommonInitTypeDef ADC_CommonInitStructure;// Konfiguracja dla wszystkich ukladow ADC
-	ADC_CommonInitStructure.ADC_Mode = ADC_Mode_Independent;// niezalezny tryb pracy przetwornikow
-	ADC_CommonInitStructure.ADC_Prescaler = ADC_Prescaler_Div2;// zegar glowny podzielony przez 2
-	ADC_CommonInitStructure.ADC_DMAAccessMode = ADC_DMAAccessMode_Disabled;// opcja istotna tylko dla tryby multi ADC
-	ADC_CommonInitStructure.ADC_TwoSamplingDelay = ADC_TwoSamplingDelay_5Cycles;// czas przerwy pomiedzy kolejnymi konwersjami
+	//---
+
+	ADC_CommonInitTypeDef ADC_CommonInitStructure;
+
+	ADC_CommonInitStructure.ADC_Mode = ADC_Mode_Independent;
+	ADC_CommonInitStructure.ADC_Prescaler = ADC_Prescaler_Div2;
+	ADC_CommonInitStructure.ADC_DMAAccessMode = ADC_DMAAccessMode_Disabled;
+	ADC_CommonInitStructure.ADC_TwoSamplingDelay = ADC_TwoSamplingDelay_5Cycles;
 	ADC_CommonInit(&ADC_CommonInitStructure);
 
-	ADC_InitTypeDef ADC_InitStructure;// Konfiguracja danego przetwornika
-	ADC_InitStructure.ADC_Resolution = ADC_Resolution_12b;// ustawienie rozdzielczosci przetwornika na maksymalna (12 bitow)
-	// wylaczenie trybu skanowania (odczytywac bedziemy jedno wejscie ADC
-	// w trybie skanowania automatycznie wykonywana jest konwersja na wielu
-	// wejsciach/kanalach)
+	//---
+
+	ADC_InitTypeDef ADC_InitStructure;
+
+	ADC_InitStructure.ADC_Resolution = ADC_Resolution_12b;
 	ADC_InitStructure.ADC_ScanConvMode = DISABLE;
-	ADC_InitStructure.ADC_ContinuousConvMode = ENABLE;// wlaczenie ciaglego trybu pracy wylaczenie zewnetrznego wyzwalania
-	// konwersja moze byc wyzwalana timerem, stanem wejscia itd. (szczegoly w dokumentacji)
+	ADC_InitStructure.ADC_ContinuousConvMode = ENABLE;
 	ADC_InitStructure.ADC_ExternalTrigConv = ADC_ExternalTrigConv_T1_CC1;
 	ADC_InitStructure.ADC_ExternalTrigConvEdge = ADC_ExternalTrigConvEdge_None;
-	// wartosc binarna wyniku bedzie podawana z wyrownaniem do prawej
-	// funkcja do odczytu stanu przetwornika ADC zwraca wartosc 16-bitowa
-	// dla przykladu, wartosc 0xFF wyrownana w prawo to 0x00FF, w lewo 0x0FF0
 	ADC_InitStructure.ADC_DataAlign = ADC_DataAlign_Right;
-	ADC_InitStructure.ADC_NbrOfConversion = 1;// liczba konwersji rowna 1, bo 1 kanal
-	ADC_Init(ADC1, &ADC_InitStructure);// zapisz wypelniona strukture do rejestrow przetwornika numer 1
+	ADC_InitStructure.ADC_NbrOfConversion = 1;
+	ADC_Init(ADC1, &ADC_InitStructure);
 
-	ADC_RegularChannelConfig(ADC1, ADC_Channel_1, 1, ADC_SampleTime_84Cycles);// Konfiguracja kanalu pierwszego ADC
-	ADC_Cmd(ADC1, ENABLE);// Uruchomienie przetwornika ADC
+	//---
+
+	ADC_RegularChannelConfig(ADC1, ADC_Channel_1, 1, ADC_SampleTime_84Cycles);
+	ADC_Cmd(ADC1, ENABLE);
 
 	TIM2_ADC_init();
 }
@@ -525,7 +527,7 @@ int main( void )
 			graj = 0;
 		}
 
-		dupa++;
+		posladki++;
 	}
 
 	return 0;
