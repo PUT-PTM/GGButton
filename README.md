@@ -1,10 +1,10 @@
-## GGButton
+# GGButton
 
-# Overview
+### Overview
 
 Simple .wav player stylized on GGButton created on STM32 microcontroller(STM32F407VG).
 
-# Description
+### Description
 
    Usefullnes and simplicity was the main target in creating this project. Music files are stored on SD card
 and their number is limited to 8 due to 8 positon winder used in our model. Keep in mind that these files 
@@ -12,16 +12,16 @@ need to be named 0.WAV, 1.WAV [...] 7.WAV. SPI is used to comunicate SD module w
 Handling of our project is pretty straight forward - to play music push main button, to stop it push again. 
 Twist winder to change song. To change audio volume, adjust potentiometer.
 	
-# Demo
+### Demo
 
 // Tu będzie filmik kierowniku
 
-# Tools
+### Tools
 
 *CooCox CoIDE, Version: 1.7.8
 *STM Studio
 
-# How to run
+### How to run
 
 1.Hardware needed:
 	* STM32f4-DISCOVERY board,
@@ -57,22 +57,22 @@ Twist winder to change song. To change audio volume, adjust potentiometer.
 * Download your audio files onto SD card(remember about proper naming).
 * Build this project with CooCox CoIDE and Download Code to Flash.
 	
-# How to compile
+### How to compile
 
 * The only step is download the project and compile it with CooCox CoIDE.
 
-# Attributions
+### Attributions
 
 - https://github.com/PUT-PTM/STMwavPlayerMR
 - https://github.com/PUT-PTM/STMwavPlayer
 - http://elm-chan.org/fsw/ff/00index_e.html
 - http://stm32.eu/2012/05/09/obsluga-fat-w-mikrokontrolerach-stm32-obsluga-kart/
 
-# License
+### License
 
 * MIT
 
-# Credits
+### Credits
 
 * Norbert Wołowiec,		
 * Gracjan Rutkowski.
