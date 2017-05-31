@@ -24,12 +24,12 @@ Twist winder to change song. To change audio volume, adjust potentiometer.
 ### How to run
 
 1.Hardware needed:
-	* STM32f4-DISCOVERY board,
-	* SD Card Module and SD Card formatted to FAT32,
-	* 1 switch,
-	* 1 rotating 8 position swith(alternatively 8 normal swithes),
-	* 1 rotary potentiometer,
-	* Headphones or loudspeaker with male jack connector.
+* STM32f4-DISCOVERY board,
+* SD Card Module and SD Card formatted to FAT32,
+* 1 switch,
+* 1 rotating 8 position swith(alternatively 8 normal swithes),
+* 1 rotary potentiometer,
+* Headphones or loudspeaker with male jack connector.
 		
 2.Connection instruction
 		
@@ -48,7 +48,7 @@ Twist winder to change song. To change audio volume, adjust potentiometer.
 	.
 	.
 	.
-	PE9   <---> Rotating swith
+	PE8   <---> Rotating swith
 		
 	PA1   <---> Potentiometer
 		 
