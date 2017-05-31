@@ -1,4 +1,4 @@
-## STMwavPlayerMR
+## GGButton
 
 # Overview
 
@@ -33,24 +33,24 @@ Twist winder to change song. To change audio volume, adjust potentiometer.
 		
 2.Connection instruction
 		
-STM32 <---> SD Card Module
-GND   <---> GND
-3V    <---> 3V3
-PB11  <---> CS
-PB15  <---> MOSI
-PB13  <---> SCK
-PB14  <---> MISO
-GND   <---> GND
+	STM32 <---> SD Card Module
+	GND   <---> GND
+	3V    <---> 3V3
+	PB11  <---> CS
+	PB15  <---> MOSI
+	PB13  <---> SCK
+	PB14  <---> MISO
+	GND   <---> GND
 		
-PE9   <---> Main button
+	PE9   <---> Main button
 	
-PE1   <---> Rotating swith
-.
-.
-.
-PE9   <---> Rotating swith
+	PE1   <---> Rotating swith
+	.
+	.
+	.
+	PE9   <---> Rotating swith
 		
-PA1   <---> Potentiometer
+	PA1   <---> Potentiometer
 		 
 3.How to run
 	
