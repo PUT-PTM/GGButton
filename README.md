@@ -8,11 +8,10 @@
 
 	Usefullnes and simplicity was the main target in creating this project. Music files are stored on SD card
 	and their number is limited to 8 due to 8 positon winder used in our model. Keep in mind that these files 
-	need to be named 0.WAV, 1.WAV [...] 7.WAV. SPI is used to comunicate SD module with STM32. Handling of our project is pretty straight 
-	forward - to play music push main button, to stop it push again. Twist winder to change song. To change audio volume, 
-	adjust potentiometer.
-
-
+	need to be named 0.WAV, 1.WAV [...] 7.WAV. SPI is used to comunicate SD module with STM32. 
+	Handling of our project is pretty straight forward - to play music push main button, to stop it push again. 
+	Twist winder to change song. To change audio volume, adjust potentiometer.
+	
 ##Demo
 
 // Tu będzie filmik kierowniku
