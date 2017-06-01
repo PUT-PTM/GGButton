@@ -18,8 +18,8 @@ Twist winder to change song. To change audio volume, adjust potentiometer.
 
 ### Tools
 
-*CooCox CoIDE, Version: 1.7.8
-*STM Studio
+* CooCox CoIDE, Version: 1.7.8
+* STM Studio
 
 ### How to run
 
